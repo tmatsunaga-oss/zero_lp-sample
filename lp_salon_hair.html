@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>hair atelier Lin｜デザインサンプル（美容室）</title>
+<meta name="description" content="無償LP制作のデザインサンプル。架空の美容室「hair atelier Lin」。雑誌風の余白・セリフ見出し・写真コラージュ・スタイリスト紹介。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#faf6ef;--beige:#ece3d4;--brown:#6f5b48;--brown-d:#52422f;--tan:#a98e72;--ink:#3a322b;--muted:#8a7f72;--line:#e6ddcd}
+  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--cream);line-height:2;font-weight:300}
+  a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+  .corm{font-family:"Cormorant Garamond",serif}.serif{font-family:"Shippori Mincho",serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+  .fu{opacity:0;transform:translateY(26px);transition:1s ease}.fu.in{opacity:1;transform:none}
+  .samplebar{background:var(--ink);color:#efe6d8;text-align:center;font-size:.78rem;padding:8px 16px}.samplebar b{color:var(--tan)}
+  header{position:absolute;top:32px;left:0;right:0;z-index:60}
+  .bar{display:flex;align-items:center;justify-content:space-between;max-width:1080px;margin:0 auto;padding:0 26px}
+  .brand{font-family:"Cormorant Garamond";font-size:1.7rem;font-weight:500;letter-spacing:.18em;color:var(--brown-d)}
+  .nav{display:flex;gap:30px;align-items:center}.nav a{font-size:.82rem;letter-spacing:.1em}.nav a:hover{color:var(--tan)}
+  .burger{display:none;background:none;border:none;cursor:pointer;width:28px;height:18px}.burger span{display:block;height:1.4px;background:var(--ink);margin:6px 0}
+  @media(max-width:880px){.nav{position:fixed;inset:0 0 0 auto;width:min(74vw,300px);background:var(--cream);flex-direction:column;gap:0;padding:80px 30px;transform:translateX(110%);transition:.4s;box-shadow:-10px 0 40px rgba(0,0,0,.08)}.nav.open{transform:none}.nav a{padding:14px 0;border-bottom:1px solid var(--line);width:100%}.burger{display:block;position:relative;z-index:61}}
+  /* hero magazine: asymmetric */
+  .hero{padding:150px 0 90px}
+  .hero .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:center}
+  .hero .htext .en{font-family:"Cormorant Garamond";font-style:italic;color:var(--tan);font-size:1.3rem;letter-spacing:.1em}
+  .hero h1{font-family:"Shippori Mincho";font-size:clamp(2rem,4.4vw,3rem);font-weight:500;line-height:1.7;letter-spacing:.08em;margin:14px 0 22px}
+  .hero p{color:var(--muted);max-width:26em}
+  .hero .htext .hcta{margin-top:30px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 32px;letter-spacing:.12em;font-size:.86rem;transition:.3s;border:1px solid var(--brown)}
+  .btn-fill{background:var(--brown);color:#fff}.btn-fill:hover{background:var(--brown-d)}
+  .btn-line{color:var(--brown-d)}.btn-line:hover{background:var(--beige)}
+  /* collage */
+  .collage{position:relative;height:520px}
+  .collage img{position:absolute;object-fit:cover;box-shadow:0 20px 50px rgba(80,60,40,.18)}
+  .collage .c1{width:64%;height:78%;top:0;right:0}
+  .collage .c2{width:46%;height:46%;left:0;bottom:0;border:8px solid var(--cream)}
+  .collage .tag{position:absolute;left:0;top:18%;writing-mode:vertical-rl;font-family:"Cormorant Garamond";font-style:italic;color:var(--tan);font-size:1.1rem;letter-spacing:.2em}
+  @media(max-width:880px){.hero .grid{grid-template-columns:1fr;gap:34px}.collage{height:78vw}}
+  section{padding:96px 0}
+  .lead{text-align:center;max-width:620px;margin:0 auto}
+  .lead .en{font-family:"Cormorant Garamond";font-style:italic;color:var(--tan);font-size:1.3rem}
+  .lead h2{font-family:"Shippori Mincho";font-size:1.7rem;font-weight:500;letter-spacing:.08em;margin:8px 0 18px}
+  .lead p{color:var(--muted)}
+  /* menu price list */
+  .price{max-width:720px;margin:50px auto 0}
+  .prow{display:flex;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .prow .nm{font-family:"Shippori Mincho";font-size:1.15rem}.prow .nm small{display:block;font-family:"Noto Sans JP";font-size:.78rem;color:var(--muted);font-weight:300;letter-spacing:0}
+  .prow .dots{flex:1;border-bottom:1px dotted #cbbfa9;transform:translateY(-5px)}
+  .prow .pr{font-family:"Cormorant Garamond";font-size:1.3rem;color:var(--brown-d);white-space:nowrap}
+  /* stylists */
+  .styl{background:var(--beige)}
+  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px}
+  .scard{text-align:center}
+  .scard .ph{width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:16px;box-shadow:0 16px 36px rgba(80,60,40,.16)}
+  .scard .role{font-family:"Cormorant Garamond";font-style:italic;color:var(--tan)}
+  .scard h3{font-family:"Shippori Mincho";font-size:1.2rem;font-weight:500;margin:2px 0 8px}
+  .scard p{font-size:.86rem;color:var(--muted)}
+  @media(max-width:760px){.sgrid{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}}
+  /* info */
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .info dl{}.info dl>div{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .info dt{font-family:"Cormorant Garamond";letter-spacing:.16em;color:var(--tan);min-width:96px;text-transform:uppercase;font-size:.92rem}
+  .info .map{background:var(--beige);min-height:280px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:26px}
+  @media(max-width:760px){.info{grid-template-columns:1fr}}
+  details.faq{border-bottom:1px solid var(--line)}details.faq summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;gap:16px;align-items:center}
+  details.faq summary::-webkit-details-marker{display:none}details.faq summary .q{font-family:"Cormorant Garamond";color:var(--tan);font-size:1.3rem}
+  details.faq summary .pl{margin-left:auto;color:var(--tan);font-size:1.3rem;transition:.3s}details.faq[open] summary .pl{transform:rotate(45deg)}
+  details.faq .ans{padding:0 0 22px 36px;color:var(--muted);font-size:.92rem}
+  .cta{text-align:center;background:var(--brown);color:#fff}
+  .cta .en{font-family:"Cormorant Garamond";font-style:italic;color:var(--tan)}
+  .cta h2{font-family:"Shippori Mincho";font-size:1.8rem;font-weight:500;letter-spacing:.08em;margin:8px 0 14px}
+  .cta .tel{font-family:"Cormorant Garamond";font-size:2.4rem;display:block;margin:8px 0 20px}
+  .cta .btn-w{background:#fff;color:var(--brown-d);border-color:#fff}.cta .btn-line{color:#fff;border-color:#fff}
+  footer{background:var(--brown-d);color:#d8ccba;text-align:center;padding:50px 0 110px;font-size:.85rem}footer .fb{font-family:"Cormorant Garamond";font-size:1.6rem;letter-spacing:.2em;color:#fff}footer .copy{margin-top:14px;font-size:.74rem;opacity:.6}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;grid-template-columns:1fr 1fr;background:var(--brown)}.mbar a{display:flex;align-items:center;justify-content:center;padding:15px;color:#fff;letter-spacing:.06em;font-size:.86rem}.mbar a:first-child{border-right:1px solid rgba(255,255,255,.25)}@media(max-width:880px){.mbar{display:grid}}
+</style>
+</head>
+<body>
+<!-- デザインサンプル（無償LP制作）／架空の美容室「hair atelier Lin」。写真は確認済みUnsplash無料画像（モデル/サロンイメージ）。実写真は差し替え前提。 -->
+<div class="samplebar">※ 本ページはデザインサンプルです（架空のサロン「hair atelier Lin」）。写真・情報・料金はすべて仮のものです。</div>
+<header><div class="bar">
+  <a href="#top" class="brand">LIN</a>
+  <nav class="nav" id="siteNav"><a href="#about">about</a><a href="#menu">menu</a><a href="#stylist">stylist</a><a href="#info">access</a><a href="#faq">q&amp;a</a></nav>
+  <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="hero" id="top">
+  <div class="wrap grid">
+    <div class="htext fu">
+      <span class="en">hair atelier</span>
+      <h1>あなたらしさを、<br>解き放つ。</h1>
+      <p>髪質もライフスタイルも、人それぞれ。一人ひとりに寄り添い、毎日が少し楽しくなる、あなただけのスタイルを。</p>
+      <div class="hcta"><a href="#info" class="btn btn-fill">ご予約</a> <a href="#menu" class="btn btn-line">メニュー</a></div>
+    </div>
+    <div class="collage fu">
+      <span class="tag">since 20XX</span>
+      <img class="c1" src="https://images.unsplash.com/photo-1572242668819-ec1794485434?q=80&w=900&auto=format&fit=crop" alt="スタイル">
+      <img class="c2" src="https://images.unsplash.com/photo-1708828287306-695da64b1165?q=80&w=700&auto=format&fit=crop" alt="店内">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap lead fu">
+    <span class="en">Concept</span>
+    <h2>髪を変えると、<br>気分が変わる。</h2>
+    <p>hair atelier LIN は、落ち着いた大人の空間で、ゆっくりと髪と向き合えるサロン。トレンドを取り入れながらも、扱いやすく再現できるスタイルをご提案します。カウンセリングを大切に、あなたの「なりたい」を叶えます。</p>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="lead fu"><span class="en">Menu</span><h2>メニュー</h2></div>
+    <div class="price">
+      <div class="prow fu"><span class="nm">カット<small>シャンプー・ブロー込み</small></span><span class="dots"></span><span class="pr">¥4,800</span></div>
+      <div class="prow fu"><span class="nm">カット＋カラー<small>髪質に合わせた薬剤を選定</small></span><span class="dots"></span><span class="pr">¥9,800</span></div>
+      <div class="prow fu"><span class="nm">カット＋パーマ<small>デジタル/エアウェーブ対応</small></span><span class="dots"></span><span class="pr">¥10,800</span></div>
+      <div class="prow fu"><span class="nm">トリートメント<small>髪のダメージ補修</small></span><span class="dots"></span><span class="pr">¥3,000〜</span></div>
+      <div class="prow fu"><span class="nm">ヘッドスパ<small>癒しのリラクゼーション</small></span><span class="dots"></span><span class="pr">¥4,000〜</span></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:.84rem;margin-top:26px">※ メニュー・料金はサンプルです。実際の制作ではお店の内容に差し替えます。</p>
+  </div>
+</section>
+
+<section class="styl" id="stylist">
+  <div class="wrap">
+    <div class="lead fu"><span class="en">Stylist</span><h2>スタイリスト</h2></div>
+    <div class="sgrid">
+      <div class="scard fu"><img class="ph" src="https://images.unsplash.com/photo-1572242668819-ec1794485434?q=80&w=600&auto=format&fit=crop" alt="スタイリスト"><div class="role">Director</div><h3>佐藤 あや</h3><p>「扱いやすくて、おしゃれ」を大切に。骨格に合わせたカットが得意です。</p></div>
+      <div class="scard fu"><img class="ph" src="https://images.unsplash.com/photo-1563021482-00a3ffc719ce?q=80&w=600&auto=format&fit=crop" alt="スタイリスト"><div class="role">Stylist</div><h3>田中 みく</h3><p>透明感のあるカラーが人気。なりたい雰囲気を一緒に見つけます。</p></div>
+      <div class="scard fu"><img class="ph" src="https://images.unsplash.com/photo-1749813387632-046a0a68c0fc?q=80&w=600&auto=format&fit=crop" alt="スタイリスト"><div class="role">Stylist</div><h3>鈴木 けん</h3><p>パーマ・メンズスタイルもお任せを。再現性の高い仕上がりに。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap">
+    <div class="lead fu"><span class="en">Access</span><h2>店舗情報</h2></div>
+    <div class="info fu" style="margin-top:46px">
+      <dl>
+        <div><dt>Salon</dt><dd>hair atelier LIN ※サンプル</dd></div>
+        <div><dt>Open</dt><dd>10:00 – 19:00（最終受付は施術により異なります）</dd></div>
+        <div><dt>Closed</dt><dd>毎週火曜・第3月曜</dd></div>
+        <div><dt>Tel</dt><dd><a href="tel:000-0000-0000" style="color:var(--brown-d);font-weight:500">000-0000-0000</a>（仮）</dd></div>
+        <div><dt>Address</dt><dd>〇〇県〇〇市〇〇 1-2-3（仮）</dd></div>
+      </dl>
+      <div class="map">地図表示エリア（実際の制作ではGoogleマップを埋め込みます）</div>
+    </div>
+  </div>
+</section>
+
+<section class="styl" id="faq">
+  <div class="wrap">
+    <div class="lead fu"><span class="en">Q &amp; A</span><h2>よくあるご質問</h2></div>
+    <div class="fu" id="faqList" style="max-width:760px;margin:40px auto 0">
+      <details class="faq" open><summary><span class="q">Q</span>予約は必要ですか？<span class="pl">+</span></summary><div class="ans">予約優先制です。お電話やWEB予約をおすすめしています。当日のご予約も空きがあれば承ります。</div></details>
+      <details class="faq"><summary><span class="q">Q</span>指名はできますか？<span class="pl">+</span></summary><div class="ans">スタイリストのご指名を承っております。ご予約時にお申し付けください。</div></details>
+      <details class="faq"><summary><span class="q">Q</span>駐車場はありますか？<span class="pl">+</span></summary><div class="ans">近隣の提携駐車場をご利用いただけます。詳しくはお問い合わせください。</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap fu">
+    <span class="en">Reservation</span>
+    <h2>あなたらしい一日を、ここから。</h2>
+    <span class="tel">000-0000-0000</span>
+    <div><a href="tel:000-0000-0000" class="btn btn-w">電話する</a> <a href="#info" class="btn btn-line">アクセス</a></div>
+  </div>
+</section>
+<footer><div class="wrap"><div class="fb">LIN</div><div style="margin-top:10px;opacity:.85">hair atelier LIN ／ 〇〇県〇〇市〇〇 1-2-3（仮）／ TEL 000-0000-0000（仮）</div><div class="copy">※本ページはサンプルです。架空のサロン・写真はイメージです / Produced by BYTE</div></div></footer>
+<div class="mbar"><a href="tel:000-0000-0000">電話する</a><a href="#info">ご予約</a></div>
+<script>
+  const burger=document.getElementById('burger'),nav=document.getElementById('siteNav');
+  burger.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.fu').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

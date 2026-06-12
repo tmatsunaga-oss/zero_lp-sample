@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>居酒屋 とり八｜サンプル（ポラロイド・マソンリー）</title>
+<meta name="description" content="無償LP制作のデザインサンプル。レイアウト別パターン：ポラロイド（傾き写真＋マソンリー）。架空の居酒屋。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Shippori+Mincho:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#faf3e6;--paper:#efe2cd;--red:#b5392b;--red-d:#8e2c20;--gold:#bb8d3b;--ink:#2b2320;--muted:#8a7d6c;--line:#e4d6bf}
+  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--cream);line-height:1.85}
+  a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+  .serif{font-family:"Shippori Mincho",serif}.hand{font-family:"Yomogi",cursive}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .fu{opacity:0;transform:translateY(34px) rotate(-2deg);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.fu.in{opacity:1;transform:none}
+  .samplebar{background:var(--ink);color:#f7ecd9;text-align:center;font-size:.78rem;padding:8px 16px}.samplebar b{color:var(--gold)}
+  header{position:sticky;top:0;z-index:60;background:rgba(250,243,230,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+  header .bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-family:"Shippori Mincho";font-weight:800;font-size:1.45rem;letter-spacing:.12em}
+  .nav{display:flex;gap:22px}.nav a{font-size:.84rem;font-weight:700}.nav a:hover{color:var(--red)}
+  .burger{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px}.burger span{display:block;height:2px;background:var(--ink);margin:5px 0}
+  @media(max-width:880px){.nav{position:absolute;top:70px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:.35s;border-bottom:2px solid var(--ink)}.nav.open{max-height:400px}.nav a{padding:14px 24px;border-top:1px solid var(--line)}.burger{display:block}}
+  section{padding:88px 0}
+  .head{text-align:center;margin-bottom:46px}
+  .head .en{color:var(--red);font-weight:700;letter-spacing:.28em;font-size:.78rem}
+  .head h2{font-family:"Shippori Mincho";font-size:2rem;font-weight:800;letter-spacing:.1em;margin-top:8px;display:inline-block;position:relative}
+  .head h2::before,.head h2::after{content:"❖";color:var(--gold);font-size:.9rem;margin:0 14px;vertical-align:middle}
+  /* HERO bottom-left */
+  .hero{position:relative;min-height:90vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(25,16,11,.82),rgba(25,16,11,.15) 60%);z-index:-1}
+  .hero .inner{padding:0 0 9vh;max-width:640px}
+  .hero .noren{display:inline-block;background:var(--red);padding:7px 18px;font-weight:700;letter-spacing:.16em;font-size:.82rem;margin-bottom:18px}
+  .hero h1{font-family:"Shippori Mincho";font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;line-height:1.5;letter-spacing:.06em;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+  .hero p{margin:18px 0 26px;max-width:30em;color:#f2e7da}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;font-weight:700;transition:.25s}
+  .btn-fill{background:var(--red);color:#fff}.btn-fill:hover{background:var(--red-d)}.btn-ghost{border:1px solid #fff;color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.15)}
+  .hero .hcta{display:flex;gap:14px;flex-wrap:wrap}
+  /* intro hand-written */
+  .intro{text-align:center;background:var(--paper)}
+  .intro p{font-family:"Shippori Mincho";font-size:clamp(1.3rem,3vw,1.8rem);line-height:2;letter-spacing:.06em}
+  .intro .small{font-family:"Noto Sans JP";font-size:.98rem;color:#5f5347;max-width:620px;margin:18px auto 0;line-height:1.95}
+  /* polaroid masonry menu */
+  .masonry{column-count:3;column-gap:20px}@media(max-width:860px){.masonry{column-count:2}}@media(max-width:560px){.masonry{column-count:1}}
+  .pola{background:#fff;padding:11px 11px 16px;box-shadow:0 14px 30px rgba(70,40,20,.16);margin-bottom:22px;break-inside:avoid;transform:rotate(-1.4deg);transition:.3s}
+  .pola:nth-child(even){transform:rotate(1.5deg)}.pola:nth-child(3n){transform:rotate(.6deg)}
+  .pola:hover{transform:rotate(0) translateY(-4px);box-shadow:0 22px 44px rgba(70,40,20,.22);z-index:2;position:relative}
+  .pola img{width:100%;display:block}
+  .pola .cap{padding:12px 6px 2px;text-align:center}
+  .pola .cap .nm{font-family:"Yomogi",cursive;font-weight:700;font-size:1.05rem}
+  .pola .cap .pr{color:var(--red);font-weight:700;margin-left:6px}
+  .pola .cap p{font-size:.8rem;color:var(--muted);margin-top:4px}
+  .tape{position:relative}.tape::before{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(-3deg);width:84px;height:20px;background:rgba(187,141,59,.4);border-radius:2px}
+  /* gallery masonry */
+  .gmason{column-count:3;column-gap:14px}@media(max-width:760px){.gmason{column-count:2}}
+  .gmason img{width:100%;margin-bottom:14px;border-radius:6px;break-inside:avoid;border:5px solid #fff;box-shadow:0 10px 24px rgba(70,40,20,.14);transform:rotate(-1deg)}
+  .gmason img:nth-child(even){transform:rotate(1.4deg)}
+  /* info tanzaku */
+  .info{max-width:880px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:start}
+  .info dl{background:#fff;border:2px solid var(--ink);padding:6px 22px}
+  .info dl>div{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line)}.info dl>div:last-child{border-bottom:none}
+  .info dt{font-family:"Shippori Mincho";font-weight:700;color:var(--red);min-width:80px}
+  .info .map{background:var(--paper);border:2px solid var(--ink);min-height:260px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:24px}
+  @media(max-width:760px){.info{grid-template-columns:1fr}}
+  /* faq */
+  .faqwrap{max-width:760px;margin:0 auto}
+  details.faq{border-bottom:1px solid var(--line)}details.faq summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:700;display:flex;gap:14px;align-items:center}
+  details.faq summary::-webkit-details-marker{display:none}details.faq summary .q{font-family:"Yomogi";color:var(--red);font-size:1.2rem;font-weight:700}
+  details.faq summary .pl{margin-left:auto;color:var(--gold);font-size:1.4rem;transition:.3s}details.faq[open] summary .pl{transform:rotate(45deg)}
+  details.faq .ans{padding:0 0 20px 32px;color:var(--muted);font-size:.9rem}
+  /* cta */
+  .cta{position:relative;color:#fff;text-align:center;padding:120px 0;overflow:hidden}
+  .cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2}.cta::after{content:"";position:absolute;inset:0;background:rgba(25,16,11,.7);z-index:-1}
+  .cta h2{font-family:"Shippori Mincho";font-size:2rem;font-weight:800;letter-spacing:.1em;margin-bottom:12px}
+  .cta .tel{font-family:"Shippori Mincho";font-weight:800;font-size:2.3rem;color:#fff;display:block;margin:8px 0 20px}
+  footer{background:#221a14;color:#cabba9;text-align:center;padding:46px 0 110px;font-size:.85rem}
+  footer .fb{font-family:"Shippori Mincho";font-weight:800;font-size:1.4rem;letter-spacing:.12em;color:#fff}footer .copy{margin-top:14px;font-size:.74rem;opacity:.6}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;grid-template-columns:1fr 1fr;background:var(--red)}.mbar a{display:flex;align-items:center;justify-content:center;gap:7px;padding:15px;color:#fff;font-weight:700;font-size:.9rem}.mbar a:first-child{border-right:1px solid rgba(255,255,255,.3)}@media(max-width:880px){.mbar{display:grid}}
+</style>
+</head>
+<body>
+<!-- デザインサンプル（無償LP制作）／レイアウト別パターン：ポラロイド。架空の居酒屋「居酒屋 とり八」。写真はUnsplash無料画像。 -->
+<div class="samplebar">レイアウト別サンプル <b>③ ポラロイド（傾き写真＋マソンリー）</b>｜架空店舗・無償LP制作デザインサンプル</div>
+<header><div class="wrap bar">
+  <a href="#top" class="brand">居酒屋 とり八</a>
+  <nav class="nav" id="siteNav"><a href="#menu">お品書き</a><a href="#gallery">店内</a><a href="#info">店舗情報</a><a href="#faq">Q&amp;A</a><a href="#reserve">ご予約</a></nav>
+  <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="hero" id="top">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1649591840628-767380a19104?q=80&w=1600&auto=format&fit=crop')"></div>
+  <div class="wrap"><div class="inner">
+    <span class="noren">炭火串と地酒</span>
+    <h1>今日もおつかれさま。<br>とりあえず、一杯。</h1>
+    <p>炭火の串、旬の一品、冷えた生ビール。気のおけない仲間と、ひとりの晩酌に。町の止まり木です。</p>
+    <div class="hcta"><a href="#reserve" class="btn btn-fill">ご予約</a><a href="#menu" class="btn btn-ghost">お品書き</a></div>
+  </div></div>
+</section>
+
+<section class="intro">
+  <div class="wrap fu">
+    <p>うまい肴と、うまい酒が<br>あればいい。</p>
+    <p class="small">居酒屋 とり八は、炭火で焼く串と季節の一品料理が自慢の居酒屋。全国の地酒やこだわりのドリンクも豊富にご用意。仕事帰りの一杯からご宴会まで、肩の力を抜いてお過ごしください。</p>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head fu"><span class="en">MENU</span><h2>お品書き</h2></div>
+    <div class="masonry">
+      <div class="pola fu tape"><img src="https://images.unsplash.com/photo-1759150595639-d128196ab6b3?q=80&w=700&auto=format&fit=crop" alt="炭火串焼き"><div class="cap"><span class="nm">炭火串焼き 盛り</span><span class="pr">¥980</span><p>備長炭で一本ずつ。おまかせ盛りで。</p></div></div>
+      <div class="pola fu"><img src="https://images.unsplash.com/photo-1611518040385-1cc65ab82c91?q=80&w=700&auto=format&fit=crop" alt="刺身"><div class="cap"><span class="nm">本日の鮮魚お造り</span><span class="pr">¥1,280</span><p>その日仕入れた旬の魚を盛り合わせ。</p></div></div>
+      <div class="pola fu"><img src="https://images.unsplash.com/photo-1622892795233-285d239877ea?q=80&w=700&auto=format&fit=crop" alt="もつ煮込み"><div class="cap"><span class="nm">名物 もつ煮込み</span><span class="pr">¥580</span><p>じっくり煮込んだ看板メニュー。</p></div></div>
+      <div class="pola fu tape"><img src="https://images.unsplash.com/photo-1611518040286-9af8ba97ab46?q=80&w=700&auto=format&fit=crop" alt="一品料理"><div class="cap"><span class="nm">季節の一品料理</span><span class="pr">¥480〜</span><p>旬の食材を使った日替りの逸品。</p></div></div>
+      <div class="pola fu"><img src="https://images.unsplash.com/photo-1774014045844-a471a834933c?q=80&w=700&auto=format&fit=crop" alt="炙り焼き"><div class="cap"><span class="nm">とり八の炙り焼き</span><span class="pr">¥880</span><p>香ばしく炙った肉料理。ボリューム満点。</p></div></div>
+      <div class="pola fu"><img src="https://images.unsplash.com/photo-1623341214825-9f4f963727da?q=80&w=700&auto=format&fit=crop" alt="ドリンク"><div class="cap"><span class="nm">生ビール・地酒各種</span><span class="pr">¥450〜</span><p>冷えた生に、全国の地酒もずらり。</p></div></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:.84rem;margin-top:18px">※ メニュー・価格はサンプルです。実際の制作ではお店の内容に差し替えます。</p>
+  </div>
+</section>
+
+<section id="gallery" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="head fu"><span class="en">GALLERY</span><h2>店内の雰囲気</h2></div>
+    <div class="gmason fu">
+      <img src="https://images.unsplash.com/photo-1601351841251-766245326eee?q=80&w=700&auto=format&fit=crop" alt="店内">
+      <img src="https://images.unsplash.com/photo-1504416285472-eccf03dd31eb?q=80&w=700&auto=format&fit=crop" alt="賑わい">
+      <img src="https://images.unsplash.com/photo-1730387761452-6f30a33e342b?q=80&w=700&auto=format&fit=crop" alt="調理">
+      <img src="https://images.unsplash.com/photo-1600259921943-dd76e768f0f5?q=80&w=700&auto=format&fit=crop" alt="宴会">
+      <img src="https://images.unsplash.com/photo-1617870314635-fc819547ec11?q=80&w=700&auto=format&fit=crop" alt="夜の通り">
+      <img src="https://images.unsplash.com/photo-1649591840628-767380a19104?q=80&w=700&auto=format&fit=crop" alt="提灯">
+    </div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap">
+    <div class="head fu"><span class="en">INFORMATION</span><h2>店舗情報</h2></div>
+    <div class="info">
+      <dl class="fu">
+        <div><dt>店名</dt><dd>居酒屋 とり八 ※サンプル</dd></div>
+        <div><dt>営業</dt><dd>17:00 – 24:00（L.O. 23:30）</dd></div>
+        <div><dt>定休日</dt><dd>日曜日</dd></div>
+        <div><dt>ご予約</dt><dd><a href="tel:000-0000-0000" style="color:var(--red);font-weight:700">000-0000-0000</a>（仮）</dd></div>
+        <div><dt>住所</dt><dd>〇〇県〇〇市〇〇 1-2-3（仮）</dd></div>
+        <div><dt>席数</dt><dd>カウンター・テーブル・座敷 計45席</dd></div>
+      </dl>
+      <div class="map fu">地図表示エリア（実際の制作ではGoogleマップを埋め込みます）</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="head fu"><span class="en">Q&amp;A</span><h2>よくあるご質問</h2></div>
+    <div class="faqwrap fu" id="faqList">
+      <details class="faq" open><summary><span class="q">Q</span>予約はできますか？<span class="pl">+</span></summary><div class="ans">お電話にてご予約を承ります。ご宴会・コースのご相談もお気軽にどうぞ。</div></details>
+      <details class="faq"><summary><span class="q">Q</span>飲み放題はありますか？<span class="pl">+</span></summary><div class="ans">宴会向けの飲み放題付きコースをご用意しています。</div></details>
+      <details class="faq"><summary><span class="q">Q</span>一人でも入りやすい？<span class="pl">+</span></summary><div class="ans">カウンター席もあり、おひとり様の晩酌も大歓迎です。</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="reserve">
+  <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1601351841251-766245326eee?q=80&w=1600&auto=format&fit=crop')"></div>
+  <div class="wrap fu">
+    <h2>のれんをくぐって、お待ちしています。</h2>
+    <span class="tel">000-0000-0000</span>
+    <div><a href="tel:000-0000-0000" class="btn btn-fill">電話する</a> <a href="#info" class="btn btn-ghost">アクセス</a></div>
+  </div>
+</section>
+<footer><div class="wrap"><div class="fb">居酒屋 とり八</div><div style="margin-top:8px;opacity:.85">〇〇県〇〇市〇〇 1-2-3（仮）／ TEL 000-0000-0000（仮）／ 定休日 日曜</div><div class="copy">SAMPLE DESIGN — 無償LP制作 デザインサンプル（ポラロイド）／架空店舗・写真はイメージ / Produced by BYTE</div></div></footer>
+<div class="mbar"><a href="tel:000-0000-0000">電話する</a><a href="#reserve">ご予約</a></div>
+<script>
+  const burger=document.getElementById('burger'),nav=document.getElementById('siteNav');
+  burger.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.fu').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

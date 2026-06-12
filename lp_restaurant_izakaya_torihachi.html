@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>居酒屋 とり八｜デザインサンプル（居酒屋LP）</title>
+<meta name="description" content="無償LP制作のデザインサンプル。架空の居酒屋「居酒屋 とり八」を例にした飲食店LPです。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Shippori+Mincho:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#faf4ea;--paper:#efe3d0;--terra:#b53a2b;--terra-dark:#8e2c20;--gold:#bb8d3b;--ink:#2b2320;--muted:#897c6e;--line:#e6dac6;--shadow:0 22px 60px rgba(60,35,18,.18);--shadow-sm:0 10px 30px rgba(60,35,18,.12)}
+  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--cream);line-height:1.9;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+  .serif{font-family:"Shippori Mincho",serif}.corm{font-family:"Cormorant Garamond",serif}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}.narrow{max-width:840px;margin:0 auto}
+  section{padding:92px 0}
+  .eyebrow{display:inline-block;font-family:"Cormorant Garamond",serif;font-size:1.05rem;letter-spacing:.3em;font-weight:600;color:var(--terra);text-transform:uppercase;margin-bottom:8px}
+  .sec-head{text-align:center;margin-bottom:16px}.sec-head h2{font-family:"Shippori Mincho",serif;font-size:2rem;font-weight:700;letter-spacing:.1em;line-height:1.5}
+  .sec-head .sub{display:block;color:var(--muted);font-size:.92rem;margin-top:10px}
+  .ornament{display:flex;align-items:center;justify-content:center;gap:14px;margin:12px 0 2px;color:var(--gold)}
+  .ornament::before,.ornament::after{content:"";height:1px;width:42px;background:var(--gold)}.ornament span{font-size:.7rem;letter-spacing:.3em}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 32px;border-radius:2px;font-weight:700;font-size:.92rem;letter-spacing:.06em;transition:.3s;cursor:pointer;border:1px solid transparent}
+  .btn-terra{background:var(--terra);color:#fff}.btn-terra:hover{background:var(--terra-dark)}
+  .btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.8)}.btn-line:hover{background:rgba(255,255,255,.15)}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .85s ease,transform .85s ease}.reveal.in{opacity:1;transform:none}
+  .samplebar{background:var(--ink);color:#f7ecd9;text-align:center;font-size:.78rem;letter-spacing:.04em;padding:8px 16px;position:relative;z-index:80}.samplebar b{color:var(--gold)}
+  header{position:sticky;top:0;z-index:60;transition:.35s}header .bar{display:flex;align-items:center;justify-content:space-between;height:78px}
+  header.scrolled{background:rgba(250,244,234,.96);backdrop-filter:blur(10px);box-shadow:0 2px 16px rgba(0,0,0,.06)}
+  .brand{display:flex;flex-direction:column;line-height:1.1;color:#fff;transition:.35s}header.scrolled .brand{color:var(--ink)}
+  .brand .be{font-family:"Shippori Mincho",serif;font-size:1.55rem;font-weight:700;letter-spacing:.14em}.brand .bj{font-size:.58rem;letter-spacing:.3em;opacity:.85}
+  .nav{display:flex;gap:26px;align-items:center}.nav a{font-size:.86rem;font-weight:500;letter-spacing:.04em;color:#fff;transition:.25s}
+  header.scrolled .nav a{color:var(--ink)}.nav a:hover{color:var(--terra)}.nav .navbtn{border:1px solid currentColor;padding:9px 18px;border-radius:2px}
+  .burger{display:none;background:none;border:none;cursor:pointer;width:30px;height:22px}.burger span{display:block;height:1.6px;background:#fff;margin:6px 0;transition:.3s}header.scrolled .burger span{background:var(--ink)}
+  @media(max-width:980px){.nav{position:fixed;inset:78px 0 auto 0;background:rgba(250,244,234,.98);backdrop-filter:blur(10px);flex-direction:column;gap:0;padding:8px 0 18px;transform:translateY(-140%);transition:.4s;box-shadow:0 16px 30px rgba(0,0,0,.08)}.nav.open{transform:none}.nav a{color:var(--ink)!important;padding:14px 26px;border-bottom:1px solid var(--line);width:100%;text-align:center}.nav .navbtn{margin:12px 24px 0;color:var(--terra)!important}.burger{display:block}}
+  .hero{position:relative;height:92vh;min-height:580px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;margin-top:-78px;padding-top:78px}
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2;transform:scale(1.05);animation:kb 18s ease-out forwards}@keyframes kb{to{transform:scale(1.16)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(30,18,12,.5),rgba(30,18,12,.62));z-index:-1}
+  .hero .pre{font-family:"Cormorant Garamond",serif;font-size:1.1rem;letter-spacing:.4em;margin-bottom:18px;color:#f3d9c7}
+  .hero h1{font-family:"Shippori Mincho",serif;font-size:2.8rem;font-weight:700;line-height:1.62;letter-spacing:.12em;text-shadow:0 2px 24px rgba(0,0,0,.38)}
+  .hero p.lead{margin:24px auto 32px;font-size:1rem;letter-spacing:.05em;max-width:28em;color:#f6ece0}.hero .hcta{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+  .scrolltip{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:"Cormorant Garamond";font-size:.72rem;letter-spacing:.3em;color:#f3d9c7;writing-mode:vertical-rl}
+  @media(max-width:760px){.hero h1{font-size:1.9rem;line-height:1.8}}
+  .concept{text-align:center}.concept .big{font-family:"Shippori Mincho",serif;font-size:1.8rem;line-height:2.05;letter-spacing:.08em}.concept p{margin-top:22px;color:#5f5347;max-width:660px;margin-left:auto;margin-right:auto;font-size:.98rem}
+  .menu-sec{background:var(--paper)}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px}
+  .dish{background:var(--cream);border:1px solid var(--line);overflow:hidden;transition:.35s}.dish:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .dish .ph{overflow:hidden}.dish .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:.6s}.dish:hover .ph img{transform:scale(1.07)}
+  .dish .b{padding:20px 22px 24px}.dish .b h3{font-family:"Shippori Mincho",serif;font-size:1.18rem;font-weight:700;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .dish .b h3 .pr{font-family:"Cormorant Garamond";color:var(--terra);font-size:1.1rem;white-space:nowrap}.dish .b p{font-size:.85rem;color:var(--muted);margin-top:8px}
+  @media(max-width:860px){.menu-grid{grid-template-columns:1fr 1fr;gap:18px}}@media(max-width:560px){.menu-grid{grid-template-columns:1fr}}
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}.feat .ph{position:relative;overflow:hidden;box-shadow:var(--shadow)}.feat .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .feat .ph::after{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.5);pointer-events:none}
+  .feat h3{font-family:"Shippori Mincho",serif;font-size:1.55rem;font-weight:700;line-height:1.6;margin-bottom:18px}
+  .flist{list-style:none}.flist li{padding:16px 0 16px 42px;border-bottom:1px solid var(--line);position:relative}.flist li:last-child{border-bottom:none}
+  .flist li .n{position:absolute;left:0;top:16px;font-family:"Cormorant Garamond";font-size:1.4rem;color:var(--terra)}.flist li b{display:block;letter-spacing:.04em}.flist li span{font-size:.88rem;color:var(--muted)}
+  @media(max-width:860px){.feat{grid-template-columns:1fr;gap:32px}}
+  .gallery-sec{background:var(--paper)}.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;margin-top:46px}
+  .gallery figure{overflow:hidden}.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}.gallery figure:hover img{transform:scale(1.07)}.gallery .big{grid-column:span 2;grid-row:span 2}
+  @media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}}
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:46px;align-items:start}.htable{width:100%;border-collapse:collapse}
+  .htable th,.htable td{padding:15px 6px;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem;vertical-align:top}
+  .htable th{font-family:"Shippori Mincho",serif;font-weight:700;color:var(--terra);width:30%;white-space:nowrap}.htable .cl{color:var(--terra)}
+  .mapcard{border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow-sm);background:#fff;display:flex;align-items:center;justify-content:center;min-height:300px;text-align:center;color:var(--muted);font-size:.88rem;padding:30px}
+  .faqlist{margin-top:44px}details.faq{border-bottom:1px solid var(--line)}details.faq summary{list-style:none;cursor:pointer;padding:21px 0;font-weight:700;display:flex;align-items:center;gap:16px;font-size:1rem}
+  details.faq summary::-webkit-details-marker{display:none}details.faq summary .q{font-family:"Cormorant Garamond";color:var(--terra);font-size:1.35rem;line-height:1}
+  details.faq summary .pl{margin-left:auto;color:var(--gold);font-size:1.5rem;line-height:1;transition:.3s}details.faq[open] summary .pl{transform:rotate(45deg)}
+  details.faq .ans{padding:0 0 22px 38px;color:var(--muted);font-size:.92rem}
+  .cta{position:relative;text-align:center;color:#fff;overflow:hidden}.cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2}
+  .cta::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(30,18,12,.66),rgba(30,18,12,.72));z-index:-1}
+  .cta h2{font-family:"Shippori Mincho",serif;font-size:2rem;font-weight:700;letter-spacing:.1em;line-height:1.7;margin-bottom:14px}.cta p{color:#f3d9c7;margin-bottom:24px}
+  .cta .tel{font-family:"Cormorant Garamond";font-size:2.3rem;font-weight:600;letter-spacing:.05em;display:inline-block;margin:6px 0 4px}.cta .cbtns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  footer{background:#241c17;color:#cabba9;padding:56px 0 108px;font-size:.86rem}.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px}
+  .foot .be{font-family:"Shippori Mincho",serif;font-size:1.5rem;letter-spacing:.14em;color:#fff}.foot .bj{font-size:.6rem;letter-spacing:.3em;opacity:.8;margin:2px 0 12px}.foot .addr{opacity:.85;line-height:2}
+  .foot .links{display:flex;gap:22px;flex-wrap:wrap}.foot .links a:hover{color:#fff}
+  .copy{margin-top:34px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:.74rem;opacity:.6;text-align:center;line-height:1.8}@media(max-width:980px){footer{padding-bottom:54px}}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;grid-template-columns:1fr 1fr;background:var(--terra)}.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;font-weight:700;font-size:.9rem;color:#fff}.mbar a:first-child{border-right:1px solid rgba(255,255,255,.35)}@media(max-width:980px){.mbar{display:grid}}
+</style>
+</head>
+<body>
+<!-- デザインサンプル（無償LP制作 告知用）／架空の居酒屋「居酒屋 とり八」。店名・写真・情報は差し替え可。写真はUnsplash無料画像。 -->
+<div class="samplebar">これは <b>無償LP制作のデザインサンプル</b> です（架空の店舗「居酒屋 とり八」）。実際はお店のお写真・情報で制作します。</div>
+<header id="siteHeader">
+  <div class="wrap bar">
+    <a href="#top" class="brand"><span class="be">居酒屋 とり八</span><span class="bj">IZAKAYA TORIHACHI</span></a>
+    <nav class="nav" id="siteNav">
+      <a href="#concept">お店について</a><a href="#menu">お品書き</a><a href="#feature">こだわり</a><a href="#gallery">店内</a><a href="#info">店舗情報</a><a href="#faq">Q&amp;A</a>
+      <a href="#reserve" class="navbtn">ご予約</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<section class="hero" id="top">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1649591840628-767380a19104?q=80&w=1600&auto=format&fit=crop')"></div>
+  <div class="inner">
+    <p class="pre corm">Izakaya Torihachi</p>
+    <h1>今日もおつかれさま。<br>とりあえず、一杯。</h1>
+    <p class="lead">炭火の串、旬の一品、冷えた生ビール。気のおけない仲間と、ひとりの晩酌に。ほっとできる、町の止まり木です。</p>
+    <div class="hcta"><a href="#reserve" class="btn btn-terra">ご予約はこちら</a><a href="#menu" class="btn btn-line">お品書きを見る</a></div>
+  </div>
+  <span class="scrolltip corm">SCROLL</span>
+</section>
+<section class="concept" id="concept">
+  <div class="wrap narrow reveal">
+    <span class="eyebrow corm">Concept</span><div class="ornament"><span>◆</span></div>
+    <p class="big serif">うまい肴と、<br>うまい酒があればいい。</p>
+    <p>居酒屋 とり八は、炭火で焼く串と、季節の一品料理が自慢の居酒屋。全国の地酒やこだわりのドリンクも豊富にご用意。仕事帰りの一杯から、ご宴会まで。肩の力を抜いて、心ゆくまでお過ごしください。</p>
+  </div>
+</section>
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow corm">Menu</span><h2 class="serif">お品書き</h2><div class="ornament"><span>◆</span></div><span class="sub">酒が進む、自慢の肴</span></div>
+    <div class="menu-grid">
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1759150595639-d128196ab6b3?q=80&w=800&auto=format&fit=crop" alt="炭火串焼き"></div><div class="b"><h3 class="serif">炭火串焼き 盛り合わせ <span class="pr">¥980</span></h3><p>備長炭で一本ずつ。とり八自慢の串をおまかせで。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1611518040385-1cc65ab82c91?q=80&w=800&auto=format&fit=crop" alt="本日の刺身"></div><div class="b"><h3 class="serif">本日の鮮魚お造り <span class="pr">¥1,280</span></h3><p>その日仕入れた旬の魚を、目利きが盛り付け。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1622892795233-285d239877ea?q=80&w=800&auto=format&fit=crop" alt="もつ煮込み"></div><div class="b"><h3 class="serif">名物 もつ煮込み <span class="pr">¥580</span></h3><p>じっくり煮込んだ看板メニュー。日本酒との相性抜群。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1611518040286-9af8ba97ab46?q=80&w=800&auto=format&fit=crop" alt="一品料理"></div><div class="b"><h3 class="serif">季節の一品料理 <span class="pr">¥480〜</span></h3><p>旬の食材を使った日替りの逸品。お酒のおともに。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1774014045844-a471a834933c?q=80&w=800&auto=format&fit=crop" alt="炙り焼き"></div><div class="b"><h3 class="serif">とり八の炙り焼き <span class="pr">¥880</span></h3><p>香ばしく炙った肉料理。ボリュームも満点です。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1623341214825-9f4f963727da?q=80&w=800&auto=format&fit=crop" alt="ドリンク"></div><div class="b"><h3 class="serif">生ビール・地酒各種 <span class="pr">¥450〜</span></h3><p>キンと冷えた生ビールに、全国の地酒もずらり。</p></div></div>
+    </div>
+    <p style="text-align:center;margin-top:28px;color:var(--muted);font-size:.84rem">※ メニュー・価格はサンプルです。実際の制作ではお店の内容に差し替えます。</p>
+  </div>
+</section>
+<section id="feature">
+  <div class="wrap feat">
+    <div class="ph reveal"><img src="https://images.unsplash.com/photo-1730387761452-6f30a33e342b?q=80&w=900&auto=format&fit=crop" alt="調理するスタッフ"></div>
+    <div class="reveal"><span class="eyebrow corm">Our Commitment</span><h3 class="serif">居酒屋 とり八の、<br>3つのこだわり。</h3>
+      <ul class="flist">
+        <li><span class="n corm">01</span><b>備長炭で焼く、こだわりの串</b><span>一本ずつていねいに。炭火ならではの香ばしさを。</span></li>
+        <li><span class="n corm">02</span><b>旬の鮮魚と、季節の一品</b><span>その日のおすすめを黒板でご案内。旬を味わう楽しみを。</span></li>
+        <li><span class="n corm">03</span><b>地酒からサワーまで、豊富な品揃え</b><span>料理に合う一杯がきっと見つかる充実のドリンク。</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="gallery-sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow corm">Gallery</span><h2 class="serif">店内の雰囲気</h2><div class="ornament"><span>◆</span></div></div>
+    <div class="gallery reveal">
+      <figure class="big"><img src="https://images.unsplash.com/photo-1601351841251-766245326eee?q=80&w=1000&auto=format&fit=crop" alt="店内"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1504416285472-eccf03dd31eb?q=80&w=700&auto=format&fit=crop" alt="賑わう店内"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1600259921943-dd76e768f0f5?q=80&w=700&auto=format&fit=crop" alt="宴会の様子"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1617870314635-fc819547ec11?q=80&w=700&auto=format&fit=crop" alt="夜の通り"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1649591840628-767380a19104?q=80&w=700&auto=format&fit=crop" alt="提灯の灯り"></figure>
+    </div>
+  </div>
+</section>
+<section id="info">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow corm">Information</span><h2 class="serif">店舗情報・アクセス</h2><div class="ornament"><span>◆</span></div></div>
+    <div class="info-grid">
+      <table class="htable reveal">
+        <tr><th>店名</th><td>居酒屋 とり八（とりはち）<span style="color:var(--muted);font-size:.8rem">※サンプル</span></td></tr>
+        <tr><th>営業時間</th><td>17:00 – 24:00（L.O. 23:30）</td></tr>
+        <tr><th>定休日</th><td class="cl">日曜日</td></tr>
+        <tr><th>ご予約</th><td><a href="tel:000-0000-0000" style="color:var(--terra);font-weight:700">000-0000-0000</a>（仮）</td></tr>
+        <tr><th>住所</th><td>〇〇県〇〇市〇〇 1-2-3（仮）</td></tr>
+        <tr><th>席数</th><td>カウンター・テーブル・座敷 計45席</td></tr>
+      </table>
+      <div class="mapcard reveal">地図表示エリア（実際の制作ではGoogleマップを埋め込みます）</div>
+    </div>
+  </div>
+</section>
+<section class="menu-sec" id="faq">
+  <div class="wrap narrow">
+    <div class="sec-head reveal"><span class="eyebrow corm">Q &amp; A</span><h2 class="serif">よくあるご質問</h2><div class="ornament"><span>◆</span></div></div>
+    <div class="faqlist reveal" id="faqList">
+      <details class="faq" open><summary><span class="q corm">Q</span>予約はできますか？<span class="pl">+</span></summary><div class="ans">お電話にてご予約を承ります。ご宴会・コースのご相談もお気軽にどうぞ。</div></details>
+      <details class="faq"><summary><span class="q corm">Q</span>飲み放題コースはありますか？<span class="pl">+</span></summary><div class="ans">宴会向けの飲み放題付きコースをご用意しています。人数とご予算をお知らせください。</div></details>
+      <details class="faq"><summary><span class="q corm">Q</span>個室や座敷はありますか？<span class="pl">+</span></summary><div class="ans">お座敷席・半個室をご用意しています。少人数から宴会までご利用いただけます。</div></details>
+      <details class="faq"><summary><span class="q corm">Q</span>一人でも入りやすいですか？<span class="pl">+</span></summary><div class="ans">カウンター席もあり、おひとり様の晩酌も大歓迎です。ふらりとお立ち寄りください。</div></details>
+    </div>
+  </div>
+</section>
+<section class="cta" id="reserve">
+  <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1601351841251-766245326eee?q=80&w=1600&auto=format&fit=crop')"></div>
+  <div class="wrap reveal">
+    <span class="eyebrow corm" style="color:#e9c39a">Reservation</span><h2 class="serif">のれんをくぐって、<br>お待ちしています。</h2><p>ご予約・お問い合わせはお気軽にどうぞ。</p>
+    <a href="tel:000-0000-0000" class="tel corm">000-0000-0000</a>
+    <div class="cbtns"><a href="tel:000-0000-0000" class="btn btn-terra" style="background:#fff;color:var(--terra-dark)">電話する</a><a href="#info" class="btn btn-line">アクセスを見る</a></div>
+  </div>
+</section>
+<footer>
+  <div class="wrap foot">
+    <div><div class="be serif">居酒屋 とり八</div><div class="bj">IZAKAYA TORIHACHI</div><div class="addr">〇〇県〇〇市〇〇 1-2-3（仮）<br>TEL 000-0000-0000（仮）／ 定休日 日曜</div></div>
+    <div class="links"><a href="#concept">お店について</a><a href="#menu">お品書き</a><a href="#feature">こだわり</a><a href="#gallery">店内</a><a href="#info">店舗情報</a><a href="#faq">Q&amp;A</a></div>
+  </div>
+  <div class="wrap copy corm">SAMPLE DESIGN — 無償LP制作 デザインサンプル｜架空の店舗・写真はイメージです / Produced by BYTE</div>
+</footer>
+<div class="mbar">
+  <a href="tel:000-0000-0000"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11 11 0 003.5.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11 11 0 00.56 3.5 1 1 0 01-.24 1z" fill="#fff"/></svg>電話する</a>
+  <a href="#reserve"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 3v4M17 3v4M4 9h16M5 5h14v15H5z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>ご予約</a>
+</div>
+<script>
+  const header=document.getElementById('siteHeader');const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const burger=document.getElementById('burger');const nav=document.getElementById('siteNav');burger.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bar Lumière｜デザインサンプル（バーLP）</title>
+<meta name="description" content="無償LP制作のデザインサンプル。架空のバー「Bar Lumière」を例にした飲食店LPです。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Shippori+Mincho:wght@500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#14151b;--panel:#1b1d25;--gold:#c8a45c;--gold-soft:#d9bf88;--ink:#ece6dc;--muted:#9b958b;--line:#2a2d37;--shadow:0 26px 60px rgba(0,0,0,.5)}
+  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.95;font-weight:300;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+  .serif{font-family:"Shippori Mincho",serif}.corm{font-family:"Cormorant Garamond",serif}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}.narrow{max-width:820px;margin:0 auto}
+  section{padding:96px 0}
+  .eyebrow{display:inline-block;font-family:"Cormorant Garamond",serif;font-size:1.05rem;letter-spacing:.34em;font-weight:600;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+  .sec-head{text-align:center;margin-bottom:16px}.sec-head h2{font-family:"Cormorant Garamond",serif;font-size:2.5rem;font-weight:600;letter-spacing:.1em;line-height:1.4}
+  .sec-head h2 .jp{display:block;font-family:"Shippori Mincho",serif;font-size:1.1rem;letter-spacing:.18em;color:var(--ink);margin-top:8px;opacity:.85}
+  .sec-head .sub{display:block;color:var(--muted);font-size:.9rem;margin-top:10px}
+  .ornament{display:flex;align-items:center;justify-content:center;gap:14px;margin:14px 0 2px;color:var(--gold)}
+  .ornament::before,.ornament::after{content:"";height:1px;width:46px;background:linear-gradient(90deg,transparent,var(--gold))}.ornament::after{transform:scaleX(-1)}.ornament span{font-size:.7rem;letter-spacing:.3em}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 34px;border-radius:1px;font-weight:500;font-size:.9rem;letter-spacing:.1em;transition:.3s;cursor:pointer;border:1px solid transparent}
+  .btn-gold{background:var(--gold);color:#1a1611}.btn-gold:hover{background:var(--gold-soft)}
+  .btn-line{background:transparent;color:var(--ink);border-color:rgba(200,164,92,.6)}.btn-line:hover{background:rgba(200,164,92,.12)}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}.reveal.in{opacity:1;transform:none}
+  .samplebar{background:#0e0f14;color:#e4d3ad;text-align:center;font-size:.78rem;letter-spacing:.05em;padding:8px 16px;position:relative;z-index:80;border-bottom:1px solid var(--line)}.samplebar b{color:var(--gold)}
+  header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.4s}header .bar{display:flex;align-items:center;justify-content:space-between;height:84px}
+  header.scrolled{background:rgba(15,16,21,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .brand{display:flex;flex-direction:column;line-height:1.12;color:var(--ink)}
+  .brand .be{font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;letter-spacing:.18em;color:var(--gold-soft)}.brand .bj{font-size:.58rem;letter-spacing:.34em;opacity:.7}
+  .nav{display:flex;gap:28px;align-items:center}.nav a{font-size:.84rem;font-weight:400;letter-spacing:.08em;color:var(--ink);transition:.25s;opacity:.88}
+  .nav a:hover{color:var(--gold)}.nav .navbtn{border:1px solid var(--gold);color:var(--gold);padding:9px 18px;border-radius:1px;opacity:1}
+  .burger{display:none;background:none;border:none;cursor:pointer;width:30px;height:22px}.burger span{display:block;height:1.4px;background:var(--ink);margin:6px 0;transition:.3s}
+  @media(max-width:980px){.nav{position:fixed;inset:84px 0 auto 0;background:rgba(15,16,21,.98);backdrop-filter:blur(10px);flex-direction:column;gap:0;padding:8px 0 18px;transform:translateY(-140%);transition:.4s;border-bottom:1px solid var(--line)}.nav.open{transform:none}.nav a{padding:14px 26px;border-bottom:1px solid var(--line);width:100%;text-align:center}.nav .navbtn{margin:12px 24px 0}.burger{display:block}}
+  .hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ink);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2;transform:scale(1.05);animation:kb 18s ease-out forwards}@keyframes kb{to{transform:scale(1.16)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(10,11,15,.55),rgba(10,11,15,.78));z-index:-1}
+  .hero .pre{font-family:"Cormorant Garamond",serif;font-size:1.15rem;letter-spacing:.44em;margin-bottom:20px;color:var(--gold-soft)}
+  .hero h1{font-family:"Cormorant Garamond",serif;font-size:3.4rem;font-weight:600;line-height:1.3;letter-spacing:.06em}
+  .hero h1 .jp{display:block;font-family:"Shippori Mincho",serif;font-size:1.5rem;letter-spacing:.16em;margin-top:14px;font-weight:500}
+  .hero p.lead{margin:26px auto 34px;font-size:1rem;letter-spacing:.06em;max-width:28em;color:#d8d2c8}.hero .hcta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .scrolltip{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:"Cormorant Garamond";font-size:.72rem;letter-spacing:.3em;color:var(--gold-soft);writing-mode:vertical-rl}
+  @media(max-width:760px){.hero h1{font-size:2.2rem}.hero h1 .jp{font-size:1.1rem}}
+  .concept{text-align:center;background:var(--panel)}.concept .big{font-family:"Shippori Mincho",serif;font-size:1.7rem;line-height:2.1;letter-spacing:.1em}.concept p{margin-top:22px;color:var(--muted);max-width:640px;margin-left:auto;margin-right:auto;font-size:.96rem}
+  .menu-sec{background:var(--bg)}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+  .dish{background:var(--panel);border:1px solid var(--line);overflow:hidden;transition:.35s}.dish:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(200,164,92,.4)}
+  .dish .ph{overflow:hidden}.dish .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:.6s;filter:saturate(.95)}.dish:hover .ph img{transform:scale(1.07)}
+  .dish .b{padding:22px 22px 26px;text-align:center}.dish .b .en{font-family:"Cormorant Garamond";font-size:.82rem;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+  .dish .b h3{font-family:"Shippori Mincho",serif;font-size:1.16rem;font-weight:600;margin:5px 0 8px;display:flex;justify-content:center;align-items:baseline;gap:10px}
+  .dish .b h3 .pr{font-family:"Cormorant Garamond";color:var(--gold-soft);font-size:1rem}.dish .b p{font-size:.84rem;color:var(--muted)}
+  @media(max-width:860px){.menu-grid{grid-template-columns:1fr 1fr;gap:16px}}@media(max-width:560px){.menu-grid{grid-template-columns:1fr}}
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}.feat .ph{position:relative;overflow:hidden;box-shadow:var(--shadow)}.feat .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .feat .ph::after{content:"";position:absolute;inset:14px;border:1px solid rgba(200,164,92,.4);pointer-events:none}
+  .feat h3{font-family:"Shippori Mincho",serif;font-size:1.5rem;font-weight:600;line-height:1.6;margin-bottom:18px}
+  .flist{list-style:none}.flist li{padding:16px 0 16px 42px;border-bottom:1px solid var(--line);position:relative}.flist li:last-child{border-bottom:none}
+  .flist li .n{position:absolute;left:0;top:16px;font-family:"Cormorant Garamond";font-size:1.4rem;color:var(--gold)}.flist li b{display:block;letter-spacing:.04em;font-weight:500}.flist li span{font-size:.88rem;color:var(--muted)}
+  @media(max-width:860px){.feat{grid-template-columns:1fr;gap:32px}}
+  .gallery-sec{background:var(--panel)}.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;margin-top:48px}
+  .gallery figure{overflow:hidden}.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}.gallery figure:hover img{transform:scale(1.07)}.gallery .big{grid-column:span 2;grid-row:span 2}
+  @media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}}
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:48px;align-items:start}.htable{width:100%;border-collapse:collapse}
+  .htable th,.htable td{padding:16px 6px;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem;vertical-align:top}
+  .htable th{font-family:"Shippori Mincho",serif;font-weight:600;color:var(--gold);width:30%;white-space:nowrap}.htable td a{color:var(--gold-soft)}
+  .mapcard{border:1px solid var(--line);overflow:hidden;background:var(--panel);display:flex;align-items:center;justify-content:center;min-height:310px;text-align:center;color:var(--muted);font-size:.88rem;padding:30px}
+  .faqlist{margin-top:46px}details.faq{border-bottom:1px solid var(--line)}details.faq summary{list-style:none;cursor:pointer;padding:22px 0;font-weight:500;display:flex;align-items:center;gap:16px;font-size:1rem}
+  details.faq summary::-webkit-details-marker{display:none}details.faq summary .q{font-family:"Cormorant Garamond";color:var(--gold);font-size:1.4rem;line-height:1}
+  details.faq summary .pl{margin-left:auto;color:var(--gold);font-size:1.5rem;line-height:1;transition:.3s}details.faq[open] summary .pl{transform:rotate(45deg)}
+  details.faq .ans{padding:0 0 24px 40px;color:var(--muted);font-size:.9rem}
+  .cta{position:relative;text-align:center;color:var(--ink);overflow:hidden}.cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2}
+  .cta::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(10,11,15,.72),rgba(10,11,15,.82));z-index:-1}
+  .cta h2{font-family:"Cormorant Garamond",serif;font-size:2.6rem;font-weight:600;letter-spacing:.08em;margin-bottom:6px}
+  .cta h2 .jp{display:block;font-family:"Shippori Mincho",serif;font-size:1.2rem;letter-spacing:.16em;margin-top:8px}
+  .cta p{color:#d8d2c8;margin:16px 0 24px}.cta .tel{font-family:"Cormorant Garamond";font-size:2.4rem;font-weight:600;letter-spacing:.06em;color:var(--gold-soft);display:inline-block;margin:6px 0 4px}.cta .cbtns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  footer{background:#0e0f14;color:#9b958b;padding:58px 0 110px;font-size:.86rem;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px}
+  .foot .be{font-family:"Cormorant Garamond";font-size:1.7rem;letter-spacing:.18em;color:var(--gold-soft)}.foot .bj{font-size:.6rem;letter-spacing:.34em;opacity:.7;margin:2px 0 12px}.foot .addr{opacity:.8;line-height:2}
+  .foot .links{display:flex;gap:22px;flex-wrap:wrap}.foot .links a:hover{color:var(--gold)}
+  .copy{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:.74rem;opacity:.6;text-align:center;line-height:1.8}@media(max-width:980px){footer{padding-bottom:54px}}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;grid-template-columns:1fr 1fr;background:var(--gold)}.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;font-weight:700;font-size:.9rem;letter-spacing:.04em;color:#191510}.mbar a:first-child{border-right:1px solid rgba(0,0,0,.2)}@media(max-width:980px){.mbar{display:grid}}
+</style>
+</head>
+<body>
+<!-- デザインサンプル（無償LP制作 告知用）／架空のバー「Bar Lumière」。店名・写真・情報は差し替え可。写真はUnsplash無料画像。 -->
+<div class="samplebar">これは <b>無償LP制作のデザインサンプル</b> です（架空の店舗「Bar Lumière」）。実際はお店のお写真・情報で制作します。</div>
+<header id="siteHeader">
+  <div class="wrap bar">
+    <a href="#top" class="brand"><span class="be">Lumière</span><span class="bj">BAR ・ LUMIÈRE</span></a>
+    <nav class="nav" id="siteNav">
+      <a href="#concept">About</a><a href="#menu">Drinks</a><a href="#feature">こだわり</a><a href="#gallery">店内</a><a href="#info">店舗情報</a><a href="#faq">Q&amp;A</a>
+      <a href="#reserve" class="navbtn">ご予約</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<section class="hero" id="top">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=1600&auto=format&fit=crop')"></div>
+  <div class="inner">
+    <p class="pre corm">Bar Lumière</p>
+    <h1>A Quiet Light.<span class="jp">夜に、ひとときの灯りを。</span></h1>
+    <p class="lead">静かに流れる時間と、一杯のカクテル。一日の終わりに、自分だけの席で。大人のための、隠れ家バー。</p>
+    <div class="hcta"><a href="#reserve" class="btn btn-gold">ご予約・お問い合わせ</a><a href="#menu" class="btn btn-line">ドリンクを見る</a></div>
+  </div>
+  <span class="scrolltip corm">SCROLL</span>
+</section>
+<section class="concept" id="concept">
+  <div class="wrap narrow reveal">
+    <span class="eyebrow corm">Concept</span><div class="ornament"><span>◆</span></div>
+    <p class="big serif">グラスの中に、<br>静かな贅沢を。</p>
+    <p>Bar Lumière は、落ち着いた灯りに包まれた大人の隠れ家。経験を積んだバーテンダーが、その日の気分に合わせた一杯をご用意します。会話を楽しむ夜も、ひとりで物思いにふける夜も。あなたの時間に、そっと寄り添います。</p>
+  </div>
+</section>
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow corm">Drinks</span><h2 class="corm">Our Selection<span class="jp">ドリンク</span></h2><div class="ornament"><span>◆</span></div><span class="sub">バーテンダーが届ける、こだわりの一杯</span></div>
+    <div class="menu-grid">
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1605270012917-bf157c5a9541?q=80&w=800&auto=format&fit=crop" alt="シグネチャーカクテル"></div><div class="b"><span class="en">Signature</span><h3 class="serif">シグネチャーカクテル <span class="pr">¥1,400〜</span></h3><p>季節のフルーツを使った、当店だけの特別な一杯。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1598994671512-395d7a6147e0?q=80&w=800&auto=format&fit=crop" alt="ウイスキー"></div><div class="b"><span class="en">Whisky</span><h3 class="serif">モルトウイスキー <span class="pr">¥1,200〜</span></h3><p>世界各国の銘柄を取り揃え。ロックでじっくりと。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?q=80&w=800&auto=format&fit=crop" alt="マティーニ"></div><div class="b"><span class="en">Classic</span><h3 class="serif">クラシックカクテル <span class="pr">¥1,300〜</span></h3><p>マティーニやネグローニなど、王道を確かな技術で。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1615887023516-9b6bcd559e87?q=80&w=800&auto=format&fit=crop" alt="ワイン"></div><div class="b"><span class="en">Wine</span><h3 class="serif">グラスワイン <span class="pr">¥1,000〜</span></h3><p>料理にも合う、厳選したワインをグラスで気軽に。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1623408859815-22534357b3db?q=80&w=800&auto=format&fit=crop" alt="おまかせカクテル"></div><div class="b"><span class="en">Omakase</span><h3 class="serif">おまかせの一杯 <span class="pr">¥1,500〜</span></h3><p>「今夜の気分」をお聞かせください。即興でお作りします。</p></div></div>
+      <div class="dish reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=800&auto=format&fit=crop" alt="バーテンダー"></div><div class="b"><span class="en">Bar Snack</span><h3 class="serif">おつまみ各種 <span class="pr">¥600〜</span></h3><p>お酒に寄り添う、ちょっとした肴もご用意しています。</p></div></div>
+    </div>
+    <p style="text-align:center;margin-top:28px;color:var(--muted);font-size:.84rem">※ メニュー・価格はサンプルです。実際の制作ではお店の内容に差し替えます。</p>
+  </div>
+</section>
+<section id="feature">
+  <div class="wrap feat">
+    <div class="ph reveal"><img src="https://images.unsplash.com/photo-1574879948818-1cfda7aa5b1a?q=80&w=900&auto=format&fit=crop" alt="カクテルを作るバーテンダー"></div>
+    <div class="reveal"><span class="eyebrow corm">Our Commitment</span><h3 class="serif">Bar Lumière の、<br>3つのこだわり。</h3>
+      <ul class="flist">
+        <li><span class="n corm">01</span><b>経験を積んだバーテンダー</b><span>確かな技術と感性で、あなたのための一杯を。</span></li>
+        <li><span class="n corm">02</span><b>静かに過ごせる、上質な空間</b><span>落ち着いた照明と音楽。日常を忘れるひとときを。</span></li>
+        <li><span class="n corm">03</span><b>一人でも心地よい、大人の距離感</b><span>おひとり様も大歓迎。心地よい時間をお約束します。</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="gallery-sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow corm">Gallery</span><h2 class="corm">Atmosphere<span class="jp">店内の雰囲気</span></h2><div class="ornament"><span>◆</span></div></div>
+    <div class="gallery reveal">
+      <figure class="big"><img src="https://images.unsplash.com/photo-1615887584283-91f1be7fdc34?q=80&w=1000&auto=format&fit=crop" alt="ラウンジ"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1568644396922-5c3bfae12521?q=80&w=700&auto=format&fit=crop" alt="乾杯"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1569924995012-c4c706bfcd51?q=80&w=700&auto=format&fit=crop" alt="バーカウンター"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=700&auto=format&fit=crop" alt="カクテルを注ぐ"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?q=80&w=700&auto=format&fit=crop" alt="カクテル"></figure>
+    </div>
+  </div>
+</section>
+<section class="menu-sec" id="info">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow corm">Information</span><h2 class="corm">Access<span class="jp">店舗情報</span></h2><div class="ornament"><span>◆</span></div></div>
+    <div class="info-grid">
+      <table class="htable reveal">
+        <tr><th>店名</th><td>Bar Lumière（バー ルミエール）<span style="color:var(--muted);font-size:.8rem">※サンプル</span></td></tr>
+        <tr><th>営業時間</th><td>19:00 – 翌2:00（L.O. 翌1:30）</td></tr>
+        <tr><th>定休日</th><td style="color:var(--gold)">日曜日</td></tr>
+        <tr><th>ご予約</th><td><a href="tel:000-0000-0000">000-0000-0000</a>（仮）</td></tr>
+        <tr><th>住所</th><td>〇〇県〇〇市〇〇 1-2-3 〇〇ビル B1F（仮）</td></tr>
+        <tr><th>チャージ</th><td>サービスチャージ ¥700（サンプル表記）</td></tr>
+      </table>
+      <div class="mapcard reveal">地図表示エリア（実際の制作ではGoogleマップを埋め込みます）</div>
+    </div>
+  </div>
+</section>
+<section id="faq">
+  <div class="wrap narrow">
+    <div class="sec-head reveal"><span class="eyebrow corm">Q &amp; A</span><h2 class="corm">Questions<span class="jp">よくあるご質問</span></h2><div class="ornament"><span>◆</span></div></div>
+    <div class="faqlist reveal" id="faqList">
+      <details class="faq" open><summary><span class="q corm">Q</span>予約は必要ですか？<span class="pl">+</span></summary><div class="ans">ご予約なしでもご利用いただけますが、お席に限りがございますので、事前のご連絡をおすすめしています。</div></details>
+      <details class="faq"><summary><span class="q corm">Q</span>一人でも入りやすいですか？<span class="pl">+</span></summary><div class="ans">はい。カウンター席を中心に、おひとり様も心地よくお過ごしいただけます。</div></details>
+      <details class="faq"><summary><span class="q corm">Q</span>カクテルが詳しくないのですが…<span class="pl">+</span></summary><div class="ans">ご安心ください。お好みやその日の気分をお伝えいただければ、最適な一杯をお作りします。</div></details>
+      <details class="faq"><summary><span class="q corm">Q</span>貸切はできますか？<span class="pl">+</span></summary><div class="ans">人数・日程に応じて貸切も承ります。記念日のご利用などもお気軽にご相談ください。</div></details>
+    </div>
+  </div>
+</section>
+<section class="cta" id="reserve">
+  <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=1600&auto=format&fit=crop')"></div>
+  <div class="wrap reveal">
+    <span class="eyebrow corm">Reservation</span><h2 class="corm">Good Evening.<span class="jp">今宵の一杯を、ご一緒に。</span></h2><p>ご予約・お問い合わせはお気軽にどうぞ。</p>
+    <a href="tel:000-0000-0000" class="tel corm">000-0000-0000</a>
+    <div class="cbtns"><a href="tel:000-0000-0000" class="btn btn-gold">電話する</a><a href="#info" class="btn btn-line">アクセスを見る</a></div>
+  </div>
+</section>
+<footer>
+  <div class="wrap foot">
+    <div><div class="be corm">Lumière</div><div class="bj">BAR ・ LUMIÈRE</div><div class="addr">〇〇県〇〇市〇〇 1-2-3 〇〇ビル B1F（仮）<br>TEL 000-0000-0000（仮）／ 定休日 日曜</div></div>
+    <div class="links"><a href="#concept">About</a><a href="#menu">Drinks</a><a href="#feature">こだわり</a><a href="#gallery">店内</a><a href="#info">店舗情報</a><a href="#faq">Q&amp;A</a></div>
+  </div>
+  <div class="wrap copy corm">SAMPLE DESIGN — 無償LP制作 デザインサンプル｜架空の店舗・写真はイメージです / Produced by BYTE</div>
+</footer>
+<div class="mbar">
+  <a href="tel:000-0000-0000"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11 11 0 003.5.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11 11 0 00.56 3.5 1 1 0 01-.24 1z" fill="#191510"/></svg>電話する</a>
+  <a href="#reserve"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 3v4M17 3v4M4 9h16M5 5h14v15H5z" stroke="#191510" stroke-width="2" stroke-linejoin="round"/></svg>ご予約</a>
+</div>
+<script>
+  const header=document.getElementById('siteHeader');const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const burger=document.getElementById('burger');const nav=document.getElementById('siteNav');burger.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

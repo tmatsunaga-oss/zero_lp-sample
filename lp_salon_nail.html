@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>nail room muume｜デザインサンプル（ネイルサロン）</title>
+<meta name="description" content="無償LP制作のデザインサンプル。架空のネイルサロン「nail room muume」。作品グリッド主役のInstagram的構成、正方形タイルのヒーロー。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--rose:#c27d8f;--rose-d:#a5637a;--blush:#f6e8ec;--mauve:#8a5f6e;--ink:#3a2e33;--muted:#8c7a80;--line:#eddde3;--cream:#fbf5f7}
+  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--cream);line-height:1.9;font-weight:300}
+  a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+  .corm{font-family:"Cormorant Garamond",serif}.maru{font-family:"Zen Maru Gothic",sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .fu{opacity:0;transform:translateY(22px) scale(.98);transition:.7s ease}.fu.in{opacity:1;transform:none}
+  .samplebar{background:var(--ink);color:#f3e3e9;text-align:center;font-size:.78rem;padding:8px 16px}.samplebar b{color:#e3a9bb}
+  header{position:sticky;top:0;z-index:60;background:rgba(251,245,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:"Cormorant Garamond";font-size:1.6rem;letter-spacing:.16em;color:var(--rose-d)}
+  .nav{display:flex;gap:24px;align-items:center}.nav a{font-size:.84rem;letter-spacing:.06em}.nav a:hover{color:var(--rose)}
+  .nav .btn{background:var(--rose);color:#fff;padding:9px 18px;border-radius:999px}
+  .burger{display:none;background:none;border:none;cursor:pointer;width:26px;height:18px}.burger span{display:block;height:2px;background:var(--rose-d);margin:5px 0;border-radius:2px}
+  @media(max-width:860px){.nav{position:absolute;top:66px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:.35s;border-bottom:1px solid var(--line)}.nav.open{max-height:400px}.nav a{padding:13px 22px;border-top:1px solid var(--line);width:100%;text-align:center}.burger{display:block}}
+  /* tiles helpers */
+  .tile{aspect-ratio:1;overflow:hidden;position:relative}
+  .tile img{width:100%;height:100%;object-fit:cover}
+  .art{display:flex;align-items:center;justify-content:center}
+  .a1{background:linear-gradient(135deg,#f4d4dd,#d99cb0)}.a2{background:linear-gradient(135deg,#efe3d6,#d9b48f)}
+  .a3{background:linear-gradient(135deg,#e7dcef,#c2a7d8)}.a4{background:linear-gradient(135deg,#fce8d8,#f0bfa0)}
+  .a5{background:linear-gradient(135deg,#d7e8e6,#a8c9c4)}.a6{background:linear-gradient(135deg,#f7dbe2,#c98b9a)}
+  .art svg{width:46%;height:46%;opacity:.85}
+  .word{background:var(--rose);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
+  .word .corm{font-size:clamp(1.2rem,3.6vw,2rem);letter-spacing:.12em;line-height:1.2}.word small{font-size:.68rem;letter-spacing:.24em;opacity:.85;margin-top:6px}
+  /* hero mosaic */
+  .hero{padding:46px 0 30px}
+  .mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  @media(max-width:680px){.mosaic{grid-template-columns:repeat(2,1fr)}}
+  .hero-copy{text-align:center;max-width:620px;margin:40px auto 0}
+  .hero-copy .en{font-family:"Cormorant Garamond";font-style:italic;color:var(--rose);font-size:1.3rem}
+  .hero-copy h1{font-family:"Zen Maru Gothic";font-weight:700;font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:.06em;margin:8px 0 16px}
+  .hero-copy p{color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 30px;border-radius:999px;font-weight:500;letter-spacing:.06em;transition:.3s}
+  .btn-rose{background:var(--rose);color:#fff}.btn-rose:hover{background:var(--rose-d)}.btn-line{border:1px solid var(--rose);color:var(--rose-d)}.btn-line:hover{background:var(--blush)}
+  .hero-copy .hcta{margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  section{padding:80px 0}
+  .head{text-align:center;margin-bottom:14px}.head .en{font-family:"Cormorant Garamond";font-style:italic;color:var(--rose);font-size:1.3rem}
+  .head h2{font-family:"Zen Maru Gothic";font-weight:700;font-size:1.6rem;letter-spacing:.06em;margin-top:2px}
+  .head p{color:var(--muted);font-size:.9rem;margin-top:8px}
+  /* work grid main */
+  .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+  @media(max-width:680px){.feed{grid-template-columns:repeat(2,1fr)}}
+  .feed .tile{border-radius:10px;cursor:default;transition:.3s}.feed .tile:hover{transform:scale(.97)}
+  .feed .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.45));color:#fff;font-size:.74rem;padding:18px 10px 8px;letter-spacing:.04em}
+  /* concept */
+  .concept{background:var(--blush);text-align:center}
+  .concept p{max-width:600px;margin:0 auto;color:#6a5a60}
+  /* menu */
+  .price{max-width:680px;margin:30px auto 0}
+  .prow{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .prow .nm{font-family:"Zen Maru Gothic";font-weight:500;font-size:1.08rem}.prow .nm small{display:block;font-size:.76rem;color:var(--muted);font-weight:300}
+  .prow .dots{flex:1;border-bottom:1px dotted #ddc6ce;transform:translateY(-5px)}.prow .pr{font-family:"Cormorant Garamond";font-size:1.25rem;color:var(--rose-d);white-space:nowrap}
+  /* info */
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .info dl>div{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}.info dt{font-family:"Cormorant Garamond";letter-spacing:.14em;color:var(--rose);min-width:92px;text-transform:uppercase;font-size:.9rem}
+  .info .map{background:var(--blush);border-radius:14px;min-height:250px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:24px}
+  @media(max-width:760px){.info{grid-template-columns:1fr}}
+  details.faq{border-bottom:1px solid var(--line)}details.faq summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;gap:14px;align-items:center}
+  details.faq summary::-webkit-details-marker{display:none}details.faq summary .q{font-family:"Cormorant Garamond";color:var(--rose);font-size:1.25rem}
+  details.faq summary .pl{margin-left:auto;color:var(--rose);font-size:1.3rem;transition:.3s}details.faq[open] summary .pl{transform:rotate(45deg)}
+  details.faq .ans{padding:0 0 20px 32px;color:var(--muted);font-size:.9rem}
+  .cta{text-align:center;background:var(--rose);color:#fff}
+  .cta .en{font-family:"Cormorant Garamond";font-style:italic}
+  .cta h2{font-family:"Zen Maru Gothic";font-weight:700;font-size:1.7rem;letter-spacing:.06em;margin:6px 0 14px}.cta .tel{font-family:"Cormorant Garamond";font-size:2.3rem;display:block;margin:8px 0 18px}
+  .cta .btn-w{background:#fff;color:var(--rose-d)}.cta .btn-line{border-color:#fff;color:#fff}
+  footer{background:var(--mauve);color:#efdde3;text-align:center;padding:46px 0 110px;font-size:.85rem}footer .fb{font-family:"Cormorant Garamond";font-size:1.5rem;letter-spacing:.18em;color:#fff}footer .copy{margin-top:14px;font-size:.74rem;opacity:.7}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;grid-template-columns:1fr 1fr;background:var(--rose)}.mbar a{display:flex;align-items:center;justify-content:center;padding:15px;color:#fff;letter-spacing:.06em;font-size:.86rem;font-weight:500}.mbar a:first-child{border-right:1px solid rgba(255,255,255,.3)}@media(max-width:860px){.mbar{display:grid}}
+</style>
+</head>
+<body>
+<!-- デザインサンプル（無償LP制作）／架空のネイルサロン「nail room muume」。作品タイルはオリジナルSVG/グラデーション、写真は確認済みUnsplash無料画像。実作品写真は差し替え前提。 -->
+<div class="samplebar">※ 本ページはデザインサンプルです（架空のサロン「nail room muume」）。作品画像・情報・料金はすべて仮のものです。</div>
+<header><div class="wrap bar">
+  <a href="#top" class="brand">muume</a>
+  <nav class="nav" id="siteNav"><a href="#works">design</a><a href="#concept">about</a><a href="#menu">menu</a><a href="#info">access</a><a href="#faq">q&amp;a</a><a href="#info" class="btn">予約</a></nav>
+  <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="mosaic fu">
+      <span class="tile"><img src="https://images.unsplash.com/photo-1559006045-d34d415b2cff?q=80&w=600&auto=format&fit=crop" alt="ネイル"></span>
+      <span class="tile art a1"><svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6v11a3 3 0 01-6 0z" fill="#fff" opacity=".9"/><circle cx="12" cy="7" r="1.4" fill="#c27d8f"/></svg></span>
+      <span class="tile word"><span class="corm">nail room</span><span class="corm" style="font-size:1.6em">muume</span><small>ADULT NAIL</small></span>
+      <span class="tile art a3"><svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="3" fill="#fff" opacity=".9"/><circle cx="15" cy="14" r="4" fill="#fff" opacity=".7"/></svg></span>
+      <span class="tile art a4"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z" fill="#fff" opacity=".85"/></svg></span>
+      <span class="tile art a6"><svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6v11a3 3 0 01-6 0z" fill="#fff" opacity=".9"/></svg></span>
+      <span class="tile art a2"><svg viewBox="0 0 24 24" fill="none"><path d="M4 16c4-8 12-8 16 0" stroke="#fff" stroke-width="2" fill="none" opacity=".85"/><circle cx="12" cy="9" r="1.6" fill="#fff"/></svg></span>
+      <span class="tile art a5"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" stroke="#fff" stroke-width="2" fill="none" opacity=".85"/><circle cx="12" cy="12" r="1.6" fill="#fff"/></svg></span>
+    </div>
+    <div class="hero-copy fu">
+      <span class="en">nail room</span>
+      <h1>指先から、わたしを整える。</h1>
+      <p>大人のための、上品で長く楽しめるネイルデザイン。あなたの手元に、さりげない自信を。</p>
+      <div class="hcta"><a href="#info" class="btn btn-rose">ご予約</a><a href="#works" class="btn btn-line">デザインを見る</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="head fu"><span class="en">Design</span><h2>デザインギャラリー</h2><p>毎月新しいデザインを更新中。お好みのテイストをお選びください。</p></div>
+    <div class="feed fu">
+      <span class="tile"><img src="https://images.unsplash.com/photo-1559006045-d34d415b2cff?q=80&w=600&auto=format&fit=crop" alt="ネイル作品"><span class="cap"># nuance</span></span>
+      <span class="tile art a1"><svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6v11a3 3 0 01-6 0z" fill="#fff" opacity=".9"/></svg><span class="cap"># one color</span></span>
+      <span class="tile art a3"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="3" fill="#fff" opacity=".9"/><circle cx="15" cy="15" r="4" fill="#fff" opacity=".7"/></svg><span class="cap"># bijou</span></span>
+      <span class="tile art a4"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z" fill="#fff" opacity=".85"/></svg><span class="cap"># gradation</span></span>
+      <span class="tile art a6"><svg viewBox="0 0 24 24" fill="none"><path d="M4 16c4-8 12-8 16 0" stroke="#fff" stroke-width="2" fill="none" opacity=".85"/><circle cx="12" cy="9" r="1.6" fill="#fff"/></svg><span class="cap"># french</span></span>
+      <span class="tile art a5"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" stroke="#fff" stroke-width="2" fill="none" opacity=".85"/><circle cx="12" cy="12" r="1.6" fill="#fff"/></svg><span class="cap"># mirror</span></span>
+      <span class="tile art a2"><svg viewBox="0 0 24 24" fill="none"><path d="M6 12h12M12 6v12" stroke="#fff" stroke-width="2" opacity=".85"/></svg><span class="cap"># art</span></span>
+      <span class="tile art a1"><svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="2.4" fill="#fff"/><circle cx="14" cy="11" r="2.4" fill="#fff" opacity=".8"/><circle cx="10" cy="15" r="2.4" fill="#fff" opacity=".7"/></svg><span class="cap"># flower</span></span>
+      <span class="tile art a3"><svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6v11a3 3 0 01-6 0z" fill="#fff" opacity=".9"/></svg><span class="cap"># simple</span></span>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:.84rem;margin-top:22px">※ 作品画像はサンプル（イメージ）です。実際の制作ではサロンの作品写真に差し替えます。</p>
+  </div>
+</section>
+
+<section class="concept" id="concept">
+  <div class="wrap fu">
+    <div class="head"><span class="en">About</span><h2>甘すぎない、大人ネイル。</h2></div>
+    <p>nail room muume は、おしゃれを楽しみたい大人のためのプライベートネイルサロン。シンプルからニュアンス、ブライダルまで、なりたい指先を一緒にデザインします。丁寧なケアと、長持ちする仕上がりが自慢です。</p>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head fu"><span class="en">Menu</span><h2>メニュー</h2></div>
+    <div class="price">
+      <div class="prow fu"><span class="nm">ワンカラー<small>ジェル / シンプル</small></span><span class="dots"></span><span class="pr">¥5,500</span></div>
+      <div class="prow fu"><span class="nm">ニュアンスデザイン<small>お好みに合わせて</small></span><span class="dots"></span><span class="pr">¥7,700〜</span></div>
+      <div class="prow fu"><span class="nm">定額デザインコース<small>豊富なサンプルから選べる</small></span><span class="dots"></span><span class="pr">¥6,600〜</span></div>
+      <div class="prow fu"><span class="nm">ケア・ハンドトリートメント<small>指先までうるおいを</small></span><span class="dots"></span><span class="pr">¥3,300〜</span></div>
+      <div class="prow fu"><span class="nm">ブライダルネイル<small>特別な日の手元に</small></span><span class="dots"></span><span class="pr">¥8,800〜</span></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:.84rem;margin-top:24px">※ メニュー・料金はサンプルです。実際の制作ではお店の内容に差し替えます。</p>
+  </div>
+</section>
+
+<section class="concept" id="info">
+  <div class="wrap">
+    <div class="head fu"><span class="en">Access</span><h2>店舗情報</h2></div>
+    <div class="info fu" style="margin-top:36px;text-align:left">
+      <dl>
+        <div><dt>Salon</dt><dd>nail room muume ※サンプル</dd></div>
+        <div><dt>Open</dt><dd>10:00 – 19:00（完全予約制）</dd></div>
+        <div><dt>Closed</dt><dd>不定休</dd></div>
+        <div><dt>Tel</dt><dd><a href="tel:000-0000-0000" style="color:var(--rose-d);font-weight:500">000-0000-0000</a>（仮）</dd></div>
+        <div><dt>Address</dt><dd>〇〇県〇〇市〇〇 1-2-3（仮）</dd></div>
+      </dl>
+      <div class="map">地図表示エリア（実際の制作ではGoogleマップを埋め込みます）</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head fu"><span class="en">Q &amp; A</span><h2>よくあるご質問</h2></div>
+    <div class="fu" id="faqList" style="max-width:720px;margin:36px auto 0">
+      <details class="faq" open><summary><span class="q">Q</span>予約制ですか？<span class="pl">+</span></summary><div class="ans">完全予約制です。お電話やWEB・SNSのDMからご予約いただけます。</div></details>
+      <details class="faq"><summary><span class="q">Q</span>他店でつけたジェルのオフもできますか？<span class="pl">+</span></summary><div class="ans">はい、他店オフも承っております。ご予約時にお申し付けください。</div></details>
+      <details class="faq"><summary><span class="q">Q</span>デザインの持ち込みはできますか？<span class="pl">+</span></summary><div class="ans">お写真などの持ち込み大歓迎です。イメージを一緒にかたちにします。</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap fu">
+    <span class="en">Reservation</span>
+    <h2>あなたの指先を、特別に。</h2>
+    <span class="tel">000-0000-0000</span>
+    <div><a href="tel:000-0000-0000" class="btn btn-w">電話する</a> <a href="#info" class="btn btn-line">アクセス</a></div>
+  </div>
+</section>
+<footer><div class="wrap"><div class="fb">muume</div><div style="margin-top:10px;opacity:.85">nail room muume ／ 〇〇県〇〇市〇〇 1-2-3（仮）／ TEL 000-0000-0000（仮）</div><div class="copy">※本ページはサンプルです。架空のサロン・画像はイメージです / Produced by BYTE</div></div></footer>
+<div class="mbar"><a href="tel:000-0000-0000">電話する</a><a href="#info">ご予約</a></div>
+<script>
+  const burger=document.getElementById('burger'),nav=document.getElementById('siteNav');
+  burger.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+  document.querySelectorAll('.fu').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

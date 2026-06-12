@@ -130,7 +130,7 @@ footer{border-top:1px solid var(--line);padding:48px 0 28px}
 <section class="sec solid" id="reasons">
   <div class="wrap">
     <div class="sh reveal"><div class="en sg">Why STUDIO ZERO</div><h2>「作って終わり」じゃない。</h2></div>
-    <div class="reasons" id="reasons"></div>
+    <div class="reasons" id="reasonsList"></div>
   </div>
 </section>
 
@@ -156,7 +156,7 @@ footer{border-top:1px solid var(--line);padding:48px 0 28px}
 <section class="sec maint" id="maint">
   <div class="wrap">
     <div class="sh reveal"><div class="en sg">Maintenance</div><h2>月額に含まれる、6つの保守</h2><p>公開してからが本番。安心して運用を続けられる体制を、月10,000円に。</p></div>
-    <div class="mgrid" id="maint"></div>
+    <div class="mgrid" id="maintList"></div>
     <div class="note reveal">上記すべて込みで <b>月額10,000円（税込）</b>。追加料金はかかりません。</div>
   </div>
 </section>
@@ -176,7 +176,7 @@ footer{border-top:1px solid var(--line);padding:48px 0 28px}
 <section class="sec faq" id="faq">
   <div class="wrap">
     <div class="sh reveal"><div class="en sg">FAQ</div><h2>よくある質問</h2></div>
-    <div class="faq-list" id="faq"></div>
+    <div class="faq-list" id="faqList"></div>
   </div>
 </section>
 
@@ -211,7 +211,7 @@ const reasons=[
  {n:"03",h:"6つの保守が標準",p:"死活監視・SSL更新・バックアップ・障害一次対応・サーバー管理・月次レポートまで月額に内包。"},
  {n:"04",h:"丸ごとおまかせ",p:"写真・文章の用意から公開後の更新まで対応。お客様の工数を最小化します。"},
 ];
-const rc=document.getElementById('reasons');
+const rc=document.getElementById('reasonsList');
 reasons.forEach((r,i)=>{const d=document.createElement('div');d.className='rcard reveal'+(i%2?' d1':'');
  d.innerHTML=`<div class="no sg">${r.n}</div><h4>${r.h}</h4><p>${r.p}</p>`;rc.appendChild(d)});
 
@@ -229,7 +229,7 @@ const maint=[
  {ic:I.srv,h:"サーバー・ドメイン管理",p:"面倒なサーバーやドメインの管理・更新を代行。専門知識は不要です。"},
  {ic:I.rep,h:"月次アクセスレポート",p:"毎月のアクセス状況を自動レポート。担当者の一言所見つきで、次の打ち手が分かります。"},
 ];
-const mg=document.getElementById('maint');
+const mg=document.getElementById('maintList');
 maint.forEach((m,i)=>{const d=document.createElement('div');d.className='mcard reveal'+(i%3?' d'+(i%3):'');
  d.innerHTML=`<div class="ic">${m.ic}</div><h4>${m.h}</h4><p>${m.p}</p>`;mg.appendChild(d)});
 
@@ -240,7 +240,7 @@ const faq=[
  {q:"解約はできますか？",a:"可能です。最低利用期間や解約手続きは、無料相談時に分かりやすくご説明します。"},
  {q:"問い合わせ方法は？",a:"このページの「無料相談（Googleフォーム）」から。営業電話は行いません。"},
 ];
-const fl=document.getElementById('faq');
+const fl=document.getElementById('faqList');
 faq.forEach(f=>{const d=document.createElement('details');d.className='qa reveal';d.innerHTML=`<summary>${f.q}</summary><div class="a">${f.a}</div>`;fl.appendChild(d)});
 
 const hdr=document.getElementById('hdr'),sticky=document.getElementById('sticky');
