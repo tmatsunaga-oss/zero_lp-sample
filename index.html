@@ -25,12 +25,12 @@
   .hero h1{font-size:clamp(22px,3.4vw,32px);font-weight:900;letter-spacing:.02em}
   .hero p{color:var(--sub);margin-top:10px;max-width:720px;font-size:14.5px}
 
-  main{padding:64px 0 64px}
+  main{padding:80px 0 64px}
   .cat{margin-bottom:56px}
   .cat-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
-  .cat-icon{width:58px;height:58px;background:#fff;border:1px solid var(--line);border-radius:14px;
+  .cat-icon{width:46px;height:46px;background:#fff;border:1px solid var(--line);border-radius:12px;
             display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .cat-icon svg{width:40px;height:40px}
+  .cat-icon svg{width:34px;height:34px}
   .cat-head h2{font-size:20px;font-weight:900;line-height:1.2}
   .cat-head .en{font-family:'Outfit',sans-serif;color:var(--accent);font-size:11px;letter-spacing:.14em;
                 text-transform:uppercase;display:block}
@@ -59,22 +59,22 @@
 
 <!-- カテゴリ見出し用アイコン定義（<use href="#ic-cat-xxx">で参照） -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-<symbol id="ic-cat-rest" viewBox="0 0 200 200">
+<symbol id="ic-cat-rest" viewBox="24 22 156 156">
   <path d="M 64 30 L 64 170 M 48 30 L 48 64 Q 48 80 64 80 Q 80 80 80 64 L 80 30" fill="none" stroke="#243049" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M 138 30 Q 120 60 120 92 Q 120 108 134 110 L 134 170" fill="none" stroke="#243049" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M 138 30 Q 152 60 150 92 Q 149 106 134 110" fill="#FFB74D" stroke="#243049" stroke-width="6" stroke-linejoin="round"/>
 </symbol>
-<symbol id="ic-cat-clinic" viewBox="0 0 200 200">
+<symbol id="ic-cat-clinic" viewBox="22 22 156 156">
   <rect x="36" y="36" width="128" height="128" rx="28" fill="#FFFFFF" stroke="#243049" stroke-width="9"/>
   <path d="M 88 64 L 112 64 L 112 88 L 136 88 L 136 112 L 112 112 L 112 136 L 88 136 L 88 112 L 64 112 L 64 88 L 88 88 Z" fill="#7FC8F5" stroke="#243049" stroke-width="7" stroke-linejoin="round"/>
 </symbol>
-<symbol id="ic-cat-salon" viewBox="0 0 200 200">
+<symbol id="ic-cat-salon" viewBox="24 26 152 152">
   <circle cx="62" cy="136" r="20" fill="#FBD3E0" stroke="#243049" stroke-width="9"/>
   <circle cx="62" cy="64" r="20" fill="#FBD3E0" stroke="#243049" stroke-width="9"/>
   <line x1="78" y1="76" x2="158" y2="132" stroke="#243049" stroke-width="10" stroke-linecap="round"/>
   <line x1="78" y1="124" x2="158" y2="68" stroke="#243049" stroke-width="10" stroke-linecap="round"/>
 </symbol>
-<symbol id="ic-cat-other" viewBox="0 0 200 200">
+<symbol id="ic-cat-other" viewBox="22 36 156 156">
   <rect x="48" y="92" width="104" height="74" fill="#FFFFFF" stroke="#243049" stroke-width="8" stroke-linejoin="round"/>
   <path d="M 40 64 L 160 64 L 168 92 L 32 92 Z" fill="#FFB74D" stroke="#243049" stroke-width="8" stroke-linejoin="round"/>
   <path d="M 56 64 L 56 92 M 80 64 L 80 92 M 104 64 L 104 92 M 128 64 L 128 92 M 152 64 L 152 92" stroke="#243049" stroke-width="4" opacity=".5"/>
@@ -82,7 +82,7 @@
   <rect x="108" y="112" width="30" height="28" fill="#DCEBFD" stroke="#243049" stroke-width="6"/>
   <line x1="40" y1="64" x2="160" y2="64" stroke="#243049" stroke-width="8" stroke-linecap="round"/>
 </symbol>
-<symbol id="ic-cat-service" viewBox="0 0 200 200">
+<symbol id="ic-cat-service" viewBox="22 26 156 156">
   <rect x="34" y="48" width="132" height="96" rx="10" fill="#FFFFFF" stroke="#243049" stroke-width="9"/>
   <line x1="34" y1="72" x2="166" y2="72" stroke="#243049" stroke-width="6"/>
   <circle cx="52" cy="60" r="5" fill="#E05A5A"/>
@@ -168,7 +168,7 @@
     </div>
     <div class="grid">
       <a class="card" href="lp_service_studio_zero.html">
-        <span class="thumb"><svg><use href="#ic-cat-service"/></svg></span>
+        <span class="thumb"><img src="https://images.unsplash.com/photo-1588912914078-2fe5224fd8b8?q=80&w=800&auto=format&fit=crop" alt="STUDIO ZERO" loading="lazy"></span>
         <span class="card-body">
           <span class="tag">Web制作サービス</span>
           <h3>STUDIO ZERO</h3>
