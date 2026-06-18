@@ -18,6 +18,7 @@
   /* photo placeholder = pitch */
   .gkph{position:relative;background:linear-gradient(135deg,#1a3a5c,#0e2340);display:flex;align-items:center;justify-content:center;overflow:hidden}
   .gkph svg{width:26%;max-width:64px}
+  .gkph img{width:100%;height:100%;object-fit:cover;display:block}
   .gkph .lab{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.78);font-size:.72rem;letter-spacing:.08em;font-weight:700}
   .editbar{background:var(--yellow);color:#3a2e00;text-align:center;font-size:.78rem;padding:8px 16px;font-weight:700}
   header{position:sticky;top:0;z-index:60;background:rgba(18,41,74,.95);backdrop-filter:blur(8px)}
@@ -111,7 +112,7 @@
     各 .gkph を <img> に差し替えてください（ヒーロー/クラス/コーチ/ギャラリー）。
   ・スクール名「GK ACADEMY」、料金、住所、電話、コーチ名などの〇〇/仮 表記は実際の情報に差し替えてください。
 -->
-<div class="editbar">⚽ デザイン案です — スクール名・写真・料金・コーチ等は実際の情報に差し替えてご利用ください</div>
+<div class="editbar">⚽ デザイン案です — スクール名・料金・コーチ・連絡先は実際の情報に、写真はスクールの実写真に差し替えてご利用ください（現在は一般的なサッカー写真です）</div>
 <header><div class="wrap bar">
   <a href="#top" class="brand">GK <em>ACADEMY</em></a>
   <nav class="nav" id="siteNav"><a href="#feature">特徴</a><a href="#class">クラス</a><a href="#coach">コーチ</a><a href="#price">料金</a><a href="#access">アクセス</a><a href="#faq">Q&amp;A</a><a href="#cta" class="btn">無料体験</a></nav>
@@ -126,7 +127,7 @@
       <p>GK専門のコーチが、基礎から本気で指導。キャッチング、ステップ、飛び出しの判断まで。「止める喜び」を、もっと。<br>※ U-9〜U-15対象（仮）</p>
       <div class="hcta"><a href="#cta" class="btn btn-y">無料体験に申し込む</a><a href="#class" class="btn btn-line">クラスを見る</a></div>
     </div>
-    <div class="hpic gkph"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">ヒーロー写真が入ります</span></div>
+    <div class="hpic gkph"><img src="https://images.unsplash.com/photo-1518905332052-b6cfda20ee45?q=80&w=900&auto=format&fit=crop" alt="ゴールキーパーの練習" loading="lazy"></div>
   </div>
 </section>
 
@@ -145,9 +146,9 @@
   <div class="wrap">
     <div class="head fu"><span class="en">CLASS</span><h2 style="color:#fff">学年別<em style="color:var(--yellow)">クラス</em></h2></div>
     <div class="cls">
-      <div class="clc fu"><div class="gkph"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">写真</span></div><div class="b"><div class="age">U-9</div><h3>キッズクラス</h3><p>まずはボールに慣れ、楽しく。GKの基本姿勢とキャッチングの土台づくり。</p></div></div>
-      <div class="clc fu"><div class="gkph"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">写真</span></div><div class="b"><div class="age">U-12</div><h3>ジュニアクラス</h3><p>ステップワーク、ダイビング、飛び出しの判断。試合で使える技術を習得。</p></div></div>
-      <div class="clc fu"><div class="gkph"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">写真</span></div><div class="b"><div class="age">U-15</div><h3>ジュニアユース</h3><p>1対1、クロス対応、配球まで。より高いレベルを目指す選手へ。</p></div></div>
+      <div class="clc fu"><div class="gkph"><img src="https://images.unsplash.com/photo-1730816399560-48481b6bfd7c?q=80&w=900&auto=format&fit=crop" alt="キッズクラス" loading="lazy"></div><div class="b"><div class="age">U-9</div><h3>キッズクラス</h3><p>まずはボールに慣れ、楽しく。GKの基本姿勢とキャッチングの土台づくり。</p></div></div>
+      <div class="clc fu"><div class="gkph"><img src="https://images.unsplash.com/photo-1521579971123-1192931a1452?q=80&w=900&auto=format&fit=crop" alt="ジュニアクラス" loading="lazy"></div><div class="b"><div class="age">U-12</div><h3>ジュニアクラス</h3><p>ステップワーク、ダイビング、飛び出しの判断。試合で使える技術を習得。</p></div></div>
+      <div class="clc fu"><div class="gkph"><img src="https://images.unsplash.com/photo-1600250395178-40fe752e5189?q=80&w=900&auto=format&fit=crop" alt="ジュニアユースクラス" loading="lazy"></div><div class="b"><div class="age">U-15</div><h3>ジュニアユース</h3><p>1対1、クロス対応、配球まで。より高いレベルを目指す選手へ。</p></div></div>
     </div>
     <p style="text-align:center;color:#c6d2e2;font-size:.84rem;margin-top:22px">※ 対象学年・クラス内容は仮の表記です。実際の内容に差し替えてください。</p>
   </div>
@@ -157,9 +158,9 @@
   <div class="wrap">
     <div class="head fu"><span class="en">COACH</span><h2><em>コーチ</em>紹介</h2></div>
     <div class="coach">
-      <div class="cc fu"><div class="gkph"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M5.5 20c0-3.6 3-5.6 6.5-5.6s6.5 2 6.5 5.6" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linecap="round"/></svg><span class="lab">コーチ写真</span></div><div class="role">HEAD COACH</div><h3>〇〇 〇〇</h3><p>元〇〇GK。指導歴〇年。「止める楽しさ」を伝えます。</p></div>
-      <div class="cc fu"><div class="gkph"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M5.5 20c0-3.6 3-5.6 6.5-5.6s6.5 2 6.5 5.6" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linecap="round"/></svg><span class="lab">コーチ写真</span></div><div class="role">COACH</div><h3>〇〇 〇〇</h3><p>育成年代の指導が得意。一人ひとりに寄り添います。</p></div>
-      <div class="cc fu"><div class="gkph"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M5.5 20c0-3.6 3-5.6 6.5-5.6s6.5 2 6.5 5.6" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linecap="round"/></svg><span class="lab">コーチ写真</span></div><div class="role">COACH</div><h3>〇〇 〇〇</h3><p>分析と理論派の指導で、考えるGKを育てます。</p></div>
+      <div class="cc fu"><div class="gkph"><img src="https://images.unsplash.com/photo-1544222059-d13512b9f1da?q=80&w=900&auto=format&fit=crop" alt="コーチ" loading="lazy"></div><div class="role">HEAD COACH</div><h3>〇〇 〇〇</h3><p>元〇〇GK。指導歴〇年。「止める楽しさ」を伝えます。</p></div>
+      <div class="cc fu"><div class="gkph"><img src="https://images.unsplash.com/photo-1543195061-21592b39548b?q=80&w=900&auto=format&fit=crop" alt="コーチ" loading="lazy"></div><div class="role">COACH</div><h3>〇〇 〇〇</h3><p>育成年代の指導が得意。一人ひとりに寄り添います。</p></div>
+      <div class="cc fu"><div class="gkph"><img src="https://images.unsplash.com/photo-1599204606471-32a75bc663e9?q=80&w=900&auto=format&fit=crop" alt="コーチ" loading="lazy"></div><div class="role">COACH</div><h3>〇〇 〇〇</h3><p>分析と理論派の指導で、考えるGKを育てます。</p></div>
     </div>
   </div>
 </section>
@@ -168,11 +169,11 @@
   <div class="wrap">
     <div class="head fu"><span class="en">TRAINING</span><h2>練習の<em>様子</em></h2></div>
     <div class="gal fu">
-      <div class="gkph big"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">練習写真が入ります</span></div>
-      <div class="gkph"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">写真</span></div>
-      <div class="gkph"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">写真</span></div>
-      <div class="gkph"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">写真</span></div>
-      <div class="gkph"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="13.5" rx="2.5" stroke="#fff" stroke-width="1.4" opacity=".7"/><circle cx="12" cy="13.2" r="3.4" stroke="#fff" stroke-width="1.4" opacity=".7"/><path d="M8.4 6.5l1.2-2.2h4.8l1.2 2.2" stroke="#fff" stroke-width="1.4" opacity=".7" stroke-linejoin="round"/><circle cx="17.3" cy="10" r="1" fill="#fff" opacity=".7"/></svg><span class="lab">写真</span></div>
+      <div class="gkph big"><img src="https://images.unsplash.com/photo-1494177310973-4841f7d5a882?q=80&w=900&auto=format&fit=crop" alt="練習風景" loading="lazy"></div>
+      <div class="gkph"><img src="https://images.unsplash.com/photo-1630552227424-81c9e52d7c83?q=80&w=900&auto=format&fit=crop" alt="練習風景" loading="lazy"></div>
+      <div class="gkph"><img src="https://images.unsplash.com/photo-1629977009792-9ea41c019ea2?q=80&w=900&auto=format&fit=crop" alt="練習風景" loading="lazy"></div>
+      <div class="gkph"><img src="https://images.unsplash.com/photo-1610736342603-4b3620157ad9?q=80&w=900&auto=format&fit=crop" alt="練習風景" loading="lazy"></div>
+      <div class="gkph"><img src="https://images.unsplash.com/photo-1739550899048-30cecc9c90c3?q=80&w=900&auto=format&fit=crop" alt="練習風景" loading="lazy"></div>
     </div>
     <p style="text-align:center;color:var(--muted);font-size:.84rem;margin-top:14px">※ 練習写真の枠です。スクールの実写真に差し替えてご利用ください。</p>
   </div>
@@ -248,7 +249,7 @@
     <div><a href="tel:000-0000-0000" class="btn btn-w">電話する</a> <a href="#access" class="btn btn-line">アクセス</a></div>
   </div>
 </section>
-<footer><div class="wrap"><div class="fb">GK <em>ACADEMY</em></div><div style="margin-top:8px;opacity:.85">〇〇グラウンド（仮）／ TEL 000-0000-0000（仮）</div><div class="copy">デザイン案／写真・スクール名・情報はイメージ・仮表記です。実際の内容に差し替えてご利用ください。 / Produced by テックファミリー</div></div></footer>
+<footer><div class="wrap"><div class="fb">GK <em>ACADEMY</em></div><div style="margin-top:8px;opacity:.85">〇〇グラウンド（仮）／ TEL 000-0000-0000（仮）</div><div class="copy">デザイン案／写真・スクール名・情報はイメージ・仮表記です。実際の内容に差し替えてご利用ください。 / Produced by 株式会社テックファミリー</div></div></footer>
 <div class="mbar"><a href="tel:000-0000-0000">電話する</a><a href="#cta">無料体験</a></div>
 <script>
   const burger=document.getElementById('burger'),nav=document.getElementById('siteNav');
